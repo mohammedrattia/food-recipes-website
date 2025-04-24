@@ -9,5 +9,17 @@
             "ingredient 3"
         ],
         "method":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Donec eget volutpat arcu. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget volutpat arcu. "
+    },
+    "2": {
+        "name": "Recipe Name",
+        "img": "image01.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Donec eget volutpat arcu.",
+        "ingredients": [
+            "ingredient 1",
+            "ingredient 2",
+            "ingredient 3",
+            "ingredient 4"
+        ],
+        "method":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Donec eget volutpat arcu. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget volutpat arcu. "
     }
 }

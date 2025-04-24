@@ -16,14 +16,15 @@ fetch('./data/recipes.json')
         }
 
         document.getElementById('image').innerHTML = 
-        `<img src="./images/image01.jpg" alt="text" width=200px height=200px>`;
+        `<img src="./images/image01.jpg" alt="Image of ${data[recipeId].name}" class="cover-image" width=200x height=auto>`;
+
         document.getElementsByTagName('title')[0].innerHTML = `${data[recipeId].name}`;
 
         document.getElementById('description').innerHTML = 
-        `<h1>Description</h1>
+        `<h1>Description</h1><hr>
         <p>${data[recipeId].description}</p>`;
     
-        let ingredientsText = `<h1>ingredients</h1><ul>`;
+        let ingredientsText = `<h1>Ingredients</h1><hr><ul>`;
         let ingredients = data[recipeId].ingredients;
         for (let i = 0; i < ingredients.length; i++)
         {
@@ -33,9 +34,11 @@ fetch('./data/recipes.json')
         document.getElementById('ingredients').innerHTML = ingredientsText;
 
         document.getElementById('method').innerHTML = 
-        `<h1>Method</h1>
+        `<h1>Method</h1><hr>
         <p>${data[recipeId].method}</p>`;
     })
     .catch(error => {
         console.error('Error loading JSON:', error);
     });
+
+
