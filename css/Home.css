@@ -21,12 +21,12 @@ body {
 }  
 .navbar h1 {
     color: #AE8201;
-    font-size: ;
     cursor: pointer;
 }
 h1 {
     margin: 20px 0;
     color: #AE8201;
+    text-align: center;
 }
 ul {
     display: flex;
@@ -51,6 +51,7 @@ p {
     padding: 10px;
     color: #333;
     font-weight: 400;
+    text-align: center;
 }
 
 .container {
@@ -65,7 +66,6 @@ p {
     transition: all 0.3s ease;
     border: 2px solid #daa401;
     border-radius: 3px;
-
 }
 .btn a {
     text-decoration: none;
@@ -76,6 +76,10 @@ p {
     color: white;
     transform: scale(1.05);
     border-radius: 3px;
+}
+.align {
+    text-align: center;
+    margin: 20px auto;
 }
 /* img {
     display: block;
