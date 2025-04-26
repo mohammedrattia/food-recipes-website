@@ -22,11 +22,10 @@ body {
 .navbar h1 {
     color: #AE8201;
     cursor: pointer;
+    text-align: center;
 }
 h1 {
-    margin: 20px 0;
     color: #AE8201;
-    text-align: center;
 }
 ul {
     display: flex;
@@ -34,8 +33,9 @@ ul {
     gap: 20px;
 }
 li {
-    font-size: 20px;
+    font-size: 18px;
     margin: 16px 8px;
+    transition: all 0.3 ease;
     /* padding 16px 14px; */
 }
 li a{
@@ -45,17 +45,12 @@ li a{
 li a:hover {
     color: #c69504;
     text-decoration: none;
-
 }
 p {
     padding: 10px;
-    color: #333;
+    color: white;
     font-weight: 400;
     text-align: center;
-}
-
-.container {
-    padding: 20px;
 }
 .btn {
     padding: 10px;
@@ -80,6 +75,63 @@ p {
 .align {
     text-align: center;
     margin: 20px auto;
+}
+.img-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.611), rgba(0,0,0,0.611)), url("../Images/main.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container {
+    z-index: 2;
+}
+.gallery h1 {
+    margin: 10px 10px;
+}
+.gallery h4 {
+    margin-left: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery-item {
+    width: 220px;
+    text-align: left;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.gallery-item h3 {
+    font-size: 1.5rem;
+    color: #b8860b; 
+    margin: 10px 0px;
+}
+
+.gallery-item p {
+    text-align: left;
+    padding: 0;
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0 0;
+}
+footer {
+    
 }
 /* img {
     display: block;
