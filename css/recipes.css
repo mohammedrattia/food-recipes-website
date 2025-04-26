@@ -1,0 +1,115 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    background-color: white;
+    border-bottom: 4px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #AE8201;
+}
+
+.navbar nav a,
+.rec-btn {
+    margin-left: 20px;
+    color: #AE8201;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.rec p{
+    color: white;
+    background-color: #F2B709;
+    border: none;
+    width: 58px;
+    text-align: center;
+    height: 18px;
+        border-radius: 5px;
+            padding: 12px 17px;
+}
+.search-container {
+    padding: 20px 40px;
+}
+
+.search-container input {
+   width: 785px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 2px solid #c7c7c7;
+    border-radius: 6px;
+    margin: 0px 195px;
+
+}
+
+.general {
+    display: flex;
+    padding: 20px 40px;
+}
+
+.tag-session {
+    width: 99px;
+}
+
+.but {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.but button {
+    background-color: #D9D9D9;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 6px;
+}
+
+.vertical-line {
+    border-left: 4px solid #ccc;
+    margin: 0 48px;
+}
+
+.recipes {
+    flex: 1;
+}
+
+.recipe-card {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+    align-items: flex-start;
+    width: 85%;
+}
+
+.recipe-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.recipe-card h2 {
+    margin: 0;
+    color: #AE8201;
+}
+
+.recipe-card p {
+    margin: 8px 0 0;
+    color: #525252;
+}
