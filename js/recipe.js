@@ -7,7 +7,7 @@ if (recipeId == null) {
     <p>Example: <code>recipe.html?id=1</code></p>`;
 }
 else{ 
-fetch('./data/recipes.json')
+fetch('data/recipes.json')
     .then(response => response.json())
     .then(data => {
         if (!data[recipeId]) {
