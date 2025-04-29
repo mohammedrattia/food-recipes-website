@@ -125,6 +125,8 @@ body {
     align-items: flex-start;
     width: 85%;
     padding: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
 .recipe-card:hover {
@@ -139,6 +141,7 @@ body {
     width: 100px;
     height: 100px;
     object-fit: cover;
+    aspect-ratio: 1/1;
 }
 
 .recipe-card h2 {

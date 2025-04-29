@@ -16,9 +16,11 @@ fetch('./data/recipes.json')
         }
 
         document.getElementById('image').innerHTML = 
-        `<img src="./images/image01.jpg" alt="Image of ${data[recipeId].name}" class="cover-image" width=200x height=auto>`;
+        `<img src="./images/image${recipeId}.jpg" alt="Image of ${data[recipeId].name}" class="cover-image" width=200x height=auto>`;
 
         document.getElementsByTagName('title')[0].innerHTML = `${data[recipeId].name}`;
+        
+        document.getElementById('article-title').innerHTML = `<h1>${data[recipeId].name}</h1>`;
 
         document.getElementById('description').innerHTML = 
         `<h1>Description</h1><hr>

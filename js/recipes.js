@@ -11,7 +11,7 @@ fetch('../data/recipes.json')
             if (data[recipe].tags.includes(recipeTag) || recipeTag == null || recipeTag == "all")
             {
                 recipesText += 
-                `<div class="recipe-card" id="${data[recipe].name}">
+                `<div class="recipe-card">
                     <img src="images/image${recipe}.jpg" alt="${data[recipe].name}">
                     <div>
                         <a href="#" onclick="recipe_request(this.id)" id="${recipe}">
@@ -25,6 +25,31 @@ fetch('../data/recipes.json')
         }
 
         document.getElementsByClassName('recipes')[0].innerHTML = recipesText;
+
+        let tagList = new Set();
+        let tags = `<button id="all" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> all</button>`;
+        for (const recipe in data)  
+        {
+            for (const tag of data[recipe].tags)
+            {
+                tagList.add(tag);
+            }
+        }
+        tagList = Array.from(tagList).sort();
+        for (const tag of tagList)
+        {
+            if (tag == recipeTag)
+            {
+                console.log(tag);
+                tags += `
+                <button id="all" onclick="tag_filter(this.id)" style="background-color: #b0b0b0;">
+                    <img src="images/plus-solid.svg"> ${tag}
+                </button>`;
+            }
+            else tags += `<button id="${tag}" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> ${tag}</button>`;
+        }
+
+        document.getElementsByClassName('but')[0].innerHTML = tags;
     })
     .catch(error => {
         console.error('Error loading JSON:', error);
@@ -56,6 +81,5 @@ function search() {
         {
             recipes[i].style.display = "none";
         }
-
     }
 }
