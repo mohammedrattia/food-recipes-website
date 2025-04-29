@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get('id');
 
-let url = "/food-recipes-website/";
+let path = "/food-recipes-website/";
 
 if (recipeId == null) {
     document.body.innerHTML = 
@@ -9,7 +9,7 @@ if (recipeId == null) {
     <p>Example: <code>recipe.html?id=1</code></p>`;
 }
 else{ 
-fetch(`${path}+data/recipes.json`)
+fetch(`${path}data/recipes.json`)
     .then(response => response.json())
     .then(data => {
         if (!data[recipeId]) {

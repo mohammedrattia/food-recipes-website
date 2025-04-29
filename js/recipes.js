@@ -3,7 +3,7 @@ const recipeTag = params.get('tag');
 
 let path = "/food-recipes-website/";
 
-fetch(`${path}+data/recipes.json`)
+fetch(`${path}data/recipes.json`)
     .then(response => response.json())
     .then(data => {
         let recipesText = ``;
