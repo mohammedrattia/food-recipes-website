@@ -48,6 +48,37 @@ footer {
     object-fit: cover;
     border-radius: 5px;
 }
+.navbar {
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 0 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid #0000004e;
+}  
+.navbar{
+    color: #AE8201;
+    cursor: pointer;
+}
+.navlist {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+.navbox {
+    font-size: 20px;
+    margin: 16px 8px;
+    /* padding 16px 14px; */
+}
+.navbox a{
+    color: #c69504c9;
+    text-decoration: none;
+}
+.navbox a:hover {
+    color: #c69504;
+    text-decoration: none;
+
+}
 
 /* Links */
 a {
