@@ -1,18 +1,18 @@
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get('id');
 
-if (!recipeId) {
+if (recipeId == null) {
     document.body.innerHTML = 
     `<h1>Error: No recipe ID provided</h1>
     <p>Example: <code>recipe.html?id=1</code></p>`;
 }
-
+else{ 
 fetch('./data/recipes.json')
     .then(response => response.json())
     .then(data => {
         if (!data[recipeId]) {
             document.body.innerHTML = `<h1>Recipe not found</h1>
-                                      <p>No recipe with ID <strong>${recipeId}</strong> exists.</p>`;
+                                    <p>No recipe with ID <strong>${recipeId}</strong> exists.</p>`;
         }
 
         document.getElementById('image').innerHTML = 
@@ -40,5 +40,5 @@ fetch('./data/recipes.json')
     .catch(error => {
         console.error('Error loading JSON:', error);
     });
-
+}
 

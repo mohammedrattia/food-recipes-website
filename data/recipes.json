@@ -1,7 +1,8 @@
 {
-    "1": {
-        "name": "Recipe Name",
+    "01": {
+        "name": "Recipe Name 01",
         "img": "image01.jpg",
+        "tags": ["dinner"],
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Donec eget volutpat arcu.",
         "ingredients": [
             "ingredient 1",
@@ -10,9 +11,10 @@
         ],
         "method":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Donec eget volutpat arcu. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget volutpat arcu. "
     },
-    "2": {
-        "name": "Recipe Name",
+    "02": {
+        "name": "Recipe Name 02",
         "img": "image01.jpg",
+        "tags": ["lunch"],
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare  fringilla ante, nec facilisis eros semper nec. Proin tempor nibh sed sem varius, nec blandit nisl pretium. Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Donec eget volutpat arcu.",
         "ingredients": [
             "ingredient 1",

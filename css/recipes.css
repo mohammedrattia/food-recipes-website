@@ -1,7 +1,7 @@
 body {
     background-color: white;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 
@@ -45,7 +45,7 @@ body {
 }
 
 .search-container input {
-   width: 785px;
+    width: 785px;
     padding: 12px 20px;
     font-size: 18px;
     border: 2px solid #c7c7c7;
@@ -70,7 +70,7 @@ body {
 }
 
 .but button {
-    background-color: #D9D9D9;
+    background-color: #e0e0e0;
     border: none;
     padding: 5px 10px;
     font-weight: bold;
@@ -79,6 +79,15 @@ body {
     align-items: center;
     gap: 6px;
     border-radius: 6px;
+}
+
+.but button img {
+    width: 15px;
+    height: 15px;
+}
+
+.but button:hover {
+    background-color: #d5d5d5;
 }
 
 .vertical-line {
@@ -96,6 +105,15 @@ body {
     gap: 20px;
     align-items: flex-start;
     width: 85%;
+    padding: 10px;
+}
+
+.recipe-card:hover {
+    background-color: #f8f8f8;
+}
+
+.recipe-card a {
+    text-decoration: none;
 }
 
 .recipe-card img {
