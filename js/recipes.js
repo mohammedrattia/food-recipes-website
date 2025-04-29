@@ -11,7 +11,7 @@ fetch('../data/recipes.json')
             if (data[recipe].tags.includes(recipeTag) || recipeTag == null || recipeTag == "all")
             {
                 recipesText += 
-                `<div class="recipe-card" id="card${recipe}">
+                `<div class="recipe-card" id="${data[recipe].name}">
                     <img src="images/image${recipe}.jpg" alt="${data[recipe].name}">
                     <div>
                         <a href="#" onclick="recipe_request(this.id)" id="${recipe}">
@@ -43,5 +43,19 @@ function tag_filter(id) {
 // filter by search
 function search() {
     input = document.getElementById('filter').value.toLowerCase();
-    
+    recipes = document.getElementsByClassName('recipe-card');
+
+    for (let i = 0; i < recipes.length; i++)
+    {
+        recipe = recipes[i].getElementsByTagName('h2')[0].innerText;
+        if (recipe.toLowerCase().indexOf(input) != -1)
+        {
+            recipes[i].style.display = "";
+        }
+        else
+        {
+            recipes[i].style.display = "none";
+        }
+
+    }
 }
