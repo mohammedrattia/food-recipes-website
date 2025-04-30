@@ -21,8 +21,15 @@ body {
 }  
 .navbar h1 {
     color: #AE8201;
+    margin: 20px 0px;
     cursor: pointer;
     text-align: center;
+}
+.navbar ul li a {
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 h1 {
     color: #AE8201;
@@ -44,6 +51,9 @@ li a{
 }
 li a:hover {
     color: #c69504;
+    background: #d9a3029f;
+    margin: 10px 10px;
+    border-radius: 5px;
     text-decoration: none;
 }
 p {
