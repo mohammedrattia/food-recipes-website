@@ -1,0 +1,183 @@
+{
+    "1": {
+      "name": "Sambosa",
+      "img": "sambosa.jpg",
+      "tags": ["snack", "dinner"],
+      "description": "A crispy, golden-brown fried pastry filled with spiced ground meat, vegetables, or cheese. A beloved snack during Ramadan and gatherings, known for its crunchy shell and savory filling.",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1/4 cup vegetable oil (for dough)",
+        "1/2 cup water (adjust as needed)",
+        "250g ground beef or lamb (or lentils for vegetarian)",
+        "1 onion, finely chopped",
+        "2 cloves garlic, minced",
+        "1 tsp cumin",
+        "1/2 tsp black pepper",
+        "1/2 tsp salt",
+        "1/4 tsp chili flakes (optional)",
+        "Oil for deep frying"
+      ],
+      "method": "Prepare the dough by mixing flour, oil, and water until smooth. Let it rest for 20 minutes. For the filling, cook the meat with onions, garlic, and spices until browned. Roll the dough thin, cut into circles, add a spoonful of filling, fold into triangles, and seal the edges. Heat oil in a deep pan and fry the sambosas until golden brown (about 3-4 minutes). Drain on paper towels and serve warm with mint yogurt or tamarind sauce."
+    },
+    "2": {
+      "name": "Macarona Béchamel",
+      "img": "makarona_bashamel.jpg",
+      "tags": ["dinner", "lunch"],
+      "description": "A rich Egyptian pasta bake with layers of penne, spiced minced meat, and creamy béchamel sauce, baked to golden perfection. Often called 'Egyptian lasagna,' it's a hearty family favorite.",
+      "ingredients": [
+        "500g penne pasta",
+        "300g ground beef or lamb",
+        "1 onion, diced",
+        "2 cloves garlic, minced",
+        "1 tsp allspice",
+        "1/2 tsp cinnamon",
+        "Salt and pepper to taste",
+        "2 tbsp tomato paste",
+        "4 cups milk",
+        "1/2 cup butter",
+        "1/2 cup flour",
+        "1/2 tsp nutmeg",
+        "1/2 cup grated mozzarella (optional)"
+      ],
+      "method": "Boil the pasta in salted water until al dente, then drain. In a pan, sauté onions and garlic, add the meat, spices, and tomato paste, cooking until browned. For the béchamel, melt butter, whisk in flour, then gradually add milk until thickened. Season with nutmeg, salt, and pepper. In a baking dish, layer pasta, meat, and béchamel sauce. Top with cheese if desired. Bake at 375°F (190°C) for 30-40 minutes until bubbly and golden. Let rest for 10 minutes before serving."
+    },
+    "3": {
+      "name": "Mansaf",
+      "img": "mansaf.jpg",
+      "tags": ["dinner", "traditional"],
+      "description": "Jordan's national dish featuring tender lamb cooked in a tangy jameed (dried yogurt) sauce, served over fragrant rice and garnished with toasted nuts. A centerpiece at celebrations.",
+      "ingredients": [
+        "1 kg lamb (shoulder or leg, cut into pieces)",
+        "2 cups basmati rice",
+        "500g jameed (dried yogurt) or plain yogurt",
+        "1 onion, quartered",
+        "1 tsp turmeric",
+        "1/2 tsp cinnamon",
+        "Salt and pepper to taste",
+        "1/4 cup slivered almonds",
+        "1/4 cup pine nuts",
+        "Fresh parsley for garnish"
+      ],
+      "method": "Soak jameed in water overnight, then blend into a smooth sauce. In a large pot, boil lamb with onion and spices until tender (about 2 hours). Add the jameed sauce and simmer for another 30 minutes. Cook rice separately with turmeric and cinnamon. To serve, spread rice on a platter, top with lamb pieces, and pour the sauce over. Garnish with toasted almonds, pine nuts, and parsley. Traditionally eaten with the right hand."
+    },
+    "4": {
+        "name": "Koshary",
+        "img": "koshary.jpg",
+        "tags": ["lunch", "vegetarian"],
+        "description": "Egypt's beloved street food - a hearty mix of rice, lentils, pasta, and chickpeas topped with crispy onions and a spicy tomato-vinegar sauce. A perfect balance of carbs and protein.",
+        "ingredients": [
+        "1 cup Egyptian short-grain rice",
+        "1 cup brown lentils",
+        "1 cup elbow macaroni",
+        "1 can chickpeas, drained",
+        "2 large onions, thinly sliced",
+        "3 cloves garlic, minced",
+        "2 tbsp vegetable oil",
+        "1 can tomato sauce",
+        "1 tbsp vinegar",
+        "1 tsp cumin",
+        "1/2 tsp chili powder",
+        "Salt to taste"
+        ],
+        "method": "Cook rice and lentils separately until tender. Boil pasta al dente. Deep fry onions until crispy and set aside. In same oil, sauté garlic, add tomato sauce, vinegar, cumin, chili powder and simmer for 10 minutes. Layer rice, lentils, pasta and chickpeas in bowls. Top with tomato sauce and crispy onions. Serve with extra vinegar sauce on the side."
+    },
+    "5": {
+        "name": "Basboosa",
+        "img": "basboosa.jpg",
+        "tags": ["dessert"],
+        "description": "A moist semolina cake soaked in fragrant sugar syrup, often flavored with coconut or rose water. Popular across the Middle East for its melt-in-your-mouth texture.",
+        "ingredients": [
+        "2 cups fine semolina",
+        "1 cup sugar",
+        "1 cup plain yogurt",
+        "1/2 cup melted butter",
+        "1/2 cup shredded coconut (optional)",
+        "1 tsp baking powder",
+        "1/4 cup milk",
+        "For syrup: 1.5 cups sugar, 1 cup water, 1 tbsp lemon juice, 1 tsp rose water"
+        ],
+        "method": "Preheat oven to 350°F (180°C). Mix semolina, sugar, yogurt, butter, coconut and baking powder. Add milk to reach thick batter consistency. Spread in greased baking pan and bake for 30-35 minutes until golden. Meanwhile, boil sugar, water and lemon juice for syrup until slightly thickened, then add rose water. Pour hot syrup over warm cake immediately after baking. Let soak for 2 hours before cutting into diamond shapes."
+    },
+    "6": {
+        "name": "Faba Beans (Foul)",
+        "img": "faba_beans.jpg",
+        "tags": ["breakfast", "vegan"],
+        "description": "A protein-packed Egyptian breakfast staple of mashed fava beans seasoned with garlic, lemon and cumin, typically served with warm pita bread and fresh vegetables.",
+        "ingredients": [
+        "2 cans fava beans (or 1 cup dried, soaked overnight)",
+        "3 cloves garlic, crushed",
+        "1/4 cup lemon juice",
+        "1/4 cup olive oil",
+        "1 tsp cumin",
+        "Salt to taste",
+        "Chopped parsley, tomatoes and onions for garnish"
+        ],
+        "method": "If using dried beans, boil until very tender (about 2 hours). Drain canned or cooked beans, reserving some liquid. Mash beans coarsely with fork or potato masher. In a pan, heat olive oil and sauté garlic until fragrant. Add mashed beans, cumin, salt and some reserved liquid. Simmer for 10 minutes, stirring occasionally. Remove from heat and stir in lemon juice. Serve warm drizzled with olive oil and topped with chopped parsley, diced tomatoes and onions. Accompany with pita bread."
+    },
+    "7": {
+        "name": "French Fries",
+        "img": "fries.jpg",
+        "tags": ["snack", "side dish"],
+        "description": "Crispy golden potato fries, a universal favorite often served as a side with sandwiches or as a snack with garlic sauce or ketchup.",
+        "ingredients": [
+        "4 large russet potatoes",
+        "Oil for deep frying",
+        "Salt to taste",
+        "Optional: 1 tsp paprika or garlic powder for seasoning"
+        ],
+        "method": "Peel potatoes and cut into even 1/2-inch sticks. Soak in cold water for 30 minutes to remove excess starch. Drain and pat completely dry. Heat oil to 325°F (160°C) and fry potatoes in batches for 5 minutes (first fry). Remove and drain. Increase oil temperature to 375°F (190°C) and fry again until golden and crispy (about 3 minutes). Drain on paper towels, season immediately with salt and optional spices. Serve hot."
+    },
+    "8": {
+        "name": "Omelette",
+        "img": "omelette.jpg",
+        "tags": ["breakfast"],
+        "description": "A fluffy egg dish customizable with various fillings, from simple herbs to cheese and vegetables. A quick and nutritious meal any time of day.",
+        "ingredients": [
+        "3 large eggs",
+        "1 tbsp butter or oil",
+        "1 small onion, diced",
+        "1 small tomato, diced",
+        "Salt and pepper to taste",
+        "Optional: 1/4 cup feta or cheddar cheese, chopped parsley or cilantro"
+        ],
+        "method": "Beat eggs with salt and pepper until well blended. Heat butter in non-stick pan over medium heat. Sauté onions until translucent, add tomatoes and cook for 1 minute. Pour in eggs and let set slightly. As edges cook, gently lift with spatula to let uncooked egg flow underneath. When nearly set, add cheese or herbs if using. Fold omelette in half and cook for another 30 seconds. Slide onto plate and serve immediately."
+    },
+    "9": {
+        "name": "Shakshouka",
+        "img": "shakshooka.jpg",
+        "tags": ["breakfast", "vegetarian"],
+        "description": "Poached eggs in a spiced tomato and pepper sauce, a North African dish that's become a Middle Eastern breakfast favorite. Best enjoyed with crusty bread for dipping.",
+        "ingredients": [
+        "3 eggs",
+        "2 ripe tomatoes, diced",
+        "1 bell pepper, diced",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "1 tsp cumin",
+        "1/2 tsp paprika",
+        "1/4 tsp chili flakes (optional)",
+        "2 tbsp olive oil",
+        "Salt and pepper to taste",
+        "Fresh parsley for garnish"
+        ],
+        "method": "Heat olive oil in a skillet over medium heat. Sauté onions until soft, add garlic and bell pepper, cooking for 5 minutes. Stir in tomatoes, cumin, paprika, chili flakes, salt and pepper. Simmer for 10-15 minutes until sauce thickens. Make small wells in the sauce and crack eggs into them. Cover pan and cook until egg whites are set but yolks are still runny (about 5-7 minutes). Garnish with fresh parsley and serve directly from the pan with warm bread."
+    },
+    "10": {
+        "name": "Egyptian Salad",
+        "img": "egyptian_salad.jpg",
+        "tags": ["side", "vegan"],
+        "description": "A refreshing chopped salad of crisp vegetables with a bright lemon dressing, commonly served alongside grilled meats or as part of mezze spreads.",
+        "ingredients": [
+        "2 medium tomatoes, finely diced",
+        "1 cucumber, peeled and diced",
+        "1 green bell pepper, diced",
+        "1 small red onion, finely chopped",
+        "1/4 cup fresh parsley, chopped",
+        "2 tbsp lemon juice",
+        "3 tbsp extra virgin olive oil",
+        "Salt and pepper to taste",
+        "Optional: 1 tbsp pomegranate molasses for tanginess"
+        ],
+        "method": "Combine all diced vegetables and parsley in a large bowl. In a small bowl, whisk together lemon juice, olive oil, salt and pepper (and pomegranate molasses if using). Pour dressing over vegetables and toss gently to combine. Let sit for 10 minutes to allow flavors to meld. Serve chilled as a side dish or with pita bread as a light meal."
+    }
+}

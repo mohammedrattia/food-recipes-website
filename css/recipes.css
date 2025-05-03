@@ -1,0 +1,186 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.header {
+    margin-left: 10px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 0 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid #0000004e;
+}  
+.navbar h1 {
+    color: #AE8201;
+    margin: 20px 0px;
+    cursor: pointer;
+    text-align: center;
+}
+.navbar ul li a {
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+h1 {
+    color: #AE8201;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+li {
+    font-size: 18px;
+    margin: 16px 8px;
+    transition: all 0.3 ease;
+    /* padding 16px 14px; */
+}
+li a{
+    color: #c69504c9;
+    text-decoration: none;
+}
+li a:hover {
+    color: #c69504;
+    background: #d9a3029f;
+    margin: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.rec-btn {
+    margin-left: 20px;
+    color: #AE8201;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.rec p{
+    color: white;
+    background-color: #F2B709;
+    border: none;
+    width: 58px;
+    text-align: center;
+    height: 18px;
+        border-radius: 5px;
+            padding: 12px 17px;
+}
+.search-container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.search-container div {
+    margin: 12px;
+    border: 2px solid #c7c7c7;
+    border-radius: 6px;
+
+}
+
+.search-container input {
+    width: 90%;
+    margin-right: 0;
+    padding: 10px 0px;
+    font-size: 18px;
+    border: none;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
+.search-container img {
+    width: 30px;
+    padding: 0px 10px;
+    opacity: 50%;
+    float: left;
+    position: relative;
+    transform: translateY(25%);
+}
+
+.general {
+    display: flex;
+    padding: 20px 40px;
+}
+
+.tag-session {
+    width: 99px;
+}
+
+.but {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.but button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 6px;
+}
+
+.but button img {
+    width: 15px;
+    height: 15px;
+}
+
+.but button:hover {
+    background-color: #d5d5d5;
+}
+
+.vertical-line {
+    border-left: 4px solid #ccc;
+    margin: 0 48px;
+}
+
+.recipes {
+    flex: 1;
+}
+
+.recipe-card {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+    align-items: flex-start;
+    width: 85%;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.recipe-card:hover {
+    background-color: #f8f8f8;
+}
+
+.recipe-card a {
+    text-decoration: none;
+}
+
+.recipe-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.recipe-card h2 {
+    margin: 0;
+    color: #AE8201;
+}
+
+.recipe-card p {
+    margin: 8px 0 0;
+    color: #525252;
+}
