@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get('id');
 
-let path = "/food-recipes-website/";
+let path = "./";
 
 if (recipeId == null) {
     document.body.innerHTML = 

@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const recipeTag = params.get('tag');
 
-let path = "/food-recipes-website/";
+let path = "./";
 
 fetch(`${path}data/recipes.json`)
     .then(response => response.json())

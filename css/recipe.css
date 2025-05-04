@@ -139,3 +139,15 @@ button:active {
     background-color: tomato;
     color: #e9e9e9;
 }
+.navbar h1 {
+    color: #AE8201;
+    margin: 20px 0px;
+    text-align: center;
+}
+.navbar h1 a,
+:visited {
+    color: #AE8201;
+    margin: 20px 0px;
+    text-align: center;
+    text-decoration: none;
+}
