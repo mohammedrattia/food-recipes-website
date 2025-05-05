@@ -5,137 +5,206 @@
 
 /* General */
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-h1, h2, h3, h4, li, ul, a, p {
-    margin-left: 10px;
-    margin-right: 10px;
+h1,
+h2,
+h3,
+h4,
+li,
+ul,
+a,
+p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
-a, p {
-    font-size: 125%;
+a,
+p {
+  font-size: 125%;
 }
 h1 {
-    color: #AE8201;
-    font-family: Montserrat, sans-serif;
-    font-size: 1.7rem;
+  color: #ae8201;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.7rem;
 }
-p, li {
-    color: black;
-    font-family: Montserrat;
-    font-size: 1.2rem;
+p,
+li {
+  color: black;
+  font-family: Montserrat;
+  font-size: 1.2rem;
 }
 hr {
-    margin: 2px 33% 15px 10px;
-    color: #d4d4d4;
+  margin: 2px 33% 15px 10px;
+  color: #d4d4d4;
 }
 li {
-    margin: 10px 10px 10px 20px;
+  margin: 10px 10px 10px 20px;
 }
 footer {
-    text-align: center;
-    padding: 3px;
+  text-align: center;
+  padding: 3px;
 }
 .hcenter {
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-    position: relative;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  position: relative;
 }
 .cover-image {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    border-radius: 5px;
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .navbar {
-    display: flex;
-    align-items: center;
-    background: rgb(255, 255, 255);
-    padding: 0 20px;
-    justify-content: space-between;
-    border-bottom: 2px solid #0000004e;
-}  
-.navbar{
-    color: #AE8201;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  padding: 0 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid #0000004e;
+}
+.navbar {
+  color: #ae8201;
+  cursor: pointer;
 }
 .navlist {
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
 }
 .navbox {
-    font-size: 20px;
-    margin: 16px 8px;
-    /* padding 16px 14px; */
+  font-size: 20px;
+  margin: 16px 8px;
+  /* padding 16px 14px; */
 }
-.navbox a{
-    color: #c69504c9;
-    text-decoration: none;
+.navbox a {
+  color: #c69504c9;
+  text-decoration: none;
 }
 .navbox a:hover {
-    color: #c69504;
-    text-decoration: none;
+  color: #c69504;
+  text-decoration: none;
 }
-#article-title h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-}
-
 
 /* Links */
 a {
-    background-color: transparent;
+  background-color: transparent;
 }
-a:link, a:visited {
-    text-decoration: none;
+a:link,
+a:visited {
+  text-decoration: none;
 }
 a:link {
-    color: #AE8201;
+  color: #ae8201;
 }
 a:visited {
-    color: #AE8201;
+  color: #ae8201;
 }
-a:hover, a:active {
-    text-decoration: underline;
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 a:hover {
-    color: #ebb513;
+  color: #ebb513;
 }
 a:active {
-    color: #AE8201;
+  color: #ae8201;
 }
 .button-links {
-    color: #e9e9e9;
-    background-color: tomato;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px;
+  color: #e9e9e9;
+  background-color: tomato;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
 }
-.button-links:visited, .button-links:hover, .button-links:active {
-    color: #e9e9e9;
-    text-decoration: none;
+.button-links:visited,
+.button-links:hover,
+.button-links:active {
+  color: #e9e9e9;
+  text-decoration: none;
 }
-.button-links:active{
-    color: tomato;
-    background-color: #e9e9e9;
+.button-links:active {
+  color: tomato;
+  background-color: #e9e9e9;
 }
 
 /* Buttons */
 button {
-    border: .1px solid;
-    border-radius: 1%;
-    background-color: #e9e9e9;
+  border: 0.1px solid;
+  border-radius: 1%;
+  background-color: #e9e9e9;
 }
 button:hover {
-    transition-duration: 0.5s;
-    background-color: #d0d0d0;
+  transition-duration: 0.5s;
+  background-color: #d0d0d0;
 }
 button:active {
-    transition-duration: 0.5s;
-    background-color: tomato;
-    color: #e9e9e9;
+  transition-duration: 0.5s;
+  background-color: tomato;
+  color: #e9e9e9;
+}
+#article-title h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+/* float: left; */
+/* #article-title {
+  content: "";
+  display: table;
+  clear: both;
+} */
+/* Heart Button Styles */
+.fav-btn {
+  background: transparent !important;
+  border: none;
+  cursor: pointer;
+  transform: scale(1.4);
+  margin: auto 20px;
+  font-size: 1.5rem;
+  color: #ae8201;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Hover effect */
+.fav-btn:hover {
+  color: #c4960d;
+  transform: scale(1.6); /* Slight grow effect */
+}
+
+/* Active (clicked) state */
+/* .fav-btn.active {
+      color: #ff4757;
+    } */
+
+/* Heart beat animation */
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fav-btn.active i {
+  animation: heartBeat 0.5s ease;
+  font-weight: 900;
 }

@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Idea</title>
+    <link rel="stylesheet" href="css/favorites.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/utensils-solid.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Top Navigation -->
+    <div class="navbar">
+      <h1>Cooking World</h1>
+      <ul>
+        <li>
+          <a href="recipes.html">Recipes</a>
+        </li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-container">
+      <div>
+        <img src="images/magnifying-glass-solid.svg" />
+        <input
+          id="filter"
+          type="text"
+          placeholder="Search"
+          onkeyup="search()"
+        />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="general">
+      <!-- Tags Section -->
+      <div class="tag-session">
+        <h2>Tags</h2>
+        <div class="but"></div>
+      </div>
+
+      <hr class="vertical-line" />
+
+      <!-- Recipes -->
+      <div class="recipes"></div>
+    </div>
+    <footer>
+      <!-- <p>Cooking World</p>
+        <p>Check these recipes!</p> -->
+    </footer>
+    <script type="text/javascript" src="js/favorites.js"></script>
+  </body>
 </html>
