@@ -1,7 +1,9 @@
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get("id");
 
-let path = "/food-recipes-website/";
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+    var path = "./";
+else var path = "/food-recipes-website/";
 
 if (recipeId == null) {
   document.body.innerHTML = `<h1>Error: No recipe ID provided</h1>
