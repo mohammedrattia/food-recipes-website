@@ -12,13 +12,18 @@ fetch(`${path}data/recipes.json`)
             if (data[recipe].tags.includes(recipeTag) || recipeTag == null || recipeTag == "all")
             {
                 recipesText += 
-                `<div class="recipe-card">
+                `<div class="recipe-card" onclick="recipe_request(this.id)" id="${recipe}">
                     <img src="images/image${recipe}.jpg" alt="${data[recipe].name}">
-                    <div>
-                        <a href="#" onclick="recipe_request(this.id)" id="${recipe}">
-                        <h2>${data[recipe].name}</h2>
+                    <div >
+                    <!-- <a href="#" onclick="recipe_request(this.id)" id="${recipe}"> -->
+                    <h2>
+                    ${data[recipe].name}
+                    <!--<i class="fa-regular fa-heart"></i>-->
+                    <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                    
+                    </h2>
                         <p>${data[recipe].description.slice(0, 300)}... <u>Learn more &rarr;</u></p>
-                        </a>
+                    <!-- </a> -->
                     </div>
                 </div>
                 `;
@@ -27,13 +32,40 @@ fetch(`${path}data/recipes.json`)
 
         document.getElementsByClassName('recipes')[0].innerHTML = recipesText;
 
+        document.querySelectorAll('.fav-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent triggering the card click
+                const recipeId = this.getAttribute('data-recipe');
+                const isActive = this.classList.toggle('active');
+                const icon = this.querySelector('i');
+                
+                // Toggle heart icon
+                if (isActive) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    localStorage.setItem(`fav_${recipeId}`, 'true');
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    localStorage.setItem(`fav_${recipeId}`, 'false');
+                }
+                
+                // Add animation
+                this.classList.add('animate');
+                setTimeout(() => this.classList.remove('animate'), 500);
+            });
+        });
+
+
         let tagList = new Set();
         let tags = `<button id="all" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> all</button>`;
         for (const recipe in data)  
         {
             for (const tag of data[recipe].tags)
             {
-                tagList.add(tag);
+                if (!/favorite/i.test(tag)) {
+                    tagList.add(tag);
+                  }
             }
         }
         tagList = Array.from(tagList).sort();
