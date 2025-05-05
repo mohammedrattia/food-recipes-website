@@ -2,7 +2,9 @@ const params = new URLSearchParams(window.location.search);
 const recipeTag = params.get("tag");
 // const recipeFavorite = "favorite";
 
-let path = "/food-recipes-website/";
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+  var path = "./";
+else var path = "/food-recipes-website/";
 
 fetch(`${path}data/recipes.json`)
   .then((response) => response.json())
