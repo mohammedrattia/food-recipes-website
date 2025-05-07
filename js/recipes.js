@@ -17,53 +17,26 @@ fetch(`${path}data/recipes.json`)
         recipeTag == null ||
         recipeTag == "all"
       ) {
-        recipesText += `<div class="recipe-card" onclick="recipe_request(this.id)" id="${recipe}">
+        recipesText += `
+                <div class="recipe-card"  id="${recipe}">
                     <img src="images/image${recipe}.jpg" alt="${
           data[recipe].name
         }">
-                    <div >
-                    <!-- <a href="#" onclick="recipe_request(this.id)" id="${recipe}"> -->
+                    <button onclick="fav_button(this.id)" class="fav-btn" id="fav_${recipe}"><i class="fa-regular fa-heart"></i></button>
+                    <div onclick="recipe_request(this.id)" id="${recipe}">
                     <h2>
                     ${data[recipe].name}
-                    <!--<i class="fa-regular fa-heart"></i>-->
-                    <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
-                    
                     </h2>
                         <p>${data[recipe].description.slice(
                           0,
                           300
                         )}... <u>Learn more &rarr;</u></p>
-                    <!-- </a> -->
                     </div>
                 </div>
                 `;
       }
     }
     document.getElementsByClassName("recipes")[0].innerHTML = recipesText;
-
-    document.querySelectorAll(".fav-btn").forEach((button) => {
-      button.addEventListener("click", function (e) {
-        e.stopPropagation(); // Prevent triggering the card click
-        const recipeId = this.getAttribute("data-recipe");
-        const isActive = this.classList.toggle("active");
-        const icon = this.querySelector("i");
-
-        // Toggle heart icon
-        if (isActive) {
-          icon.classList.remove("fa-regular");
-          icon.classList.add("fa-solid");
-          localStorage.setItem(`fav_${recipeId}`, "true");
-        } else {
-          icon.classList.remove("fa-solid");
-          icon.classList.add("fa-regular");
-          localStorage.setItem(`fav_${recipeId}`, "false");
-        }
-
-        // Add animation
-        this.classList.add("animate");
-        setTimeout(() => this.classList.remove("animate"), 500);
-      });
-    });
 
     let tagList = new Set();
     for (const recipe in data) {
@@ -117,4 +90,25 @@ function search() {
       recipes[i].style.display = "none";
     }
   }
+}
+function fav_button(id) {
+  let btn_id = document.getElementById(id);
+  const isActive = btn_id.classList.toggle("active");
+  const icon = btn_id.querySelector("i");
+
+  // Toggle heart icon
+  if (isActive) {
+    icon.classList.remove("fa-regular");
+    icon.classList.add("fa-solid");
+
+    // add to local storage
+  } else {
+    icon.classList.remove("fa-solid");
+    icon.classList.add("fa-regular");
+    // remove from local storage
+  }
+
+  // Add animation
+  this.classList.add("animate");
+  setTimeout(() => this.classList.remove("animate"), 500);
 }
