@@ -208,3 +208,15 @@ button:active {
   animation: heartBeat 0.5s ease;
   font-weight: 900;
 }
+.navbar h1 {
+    color: #AE8201;
+    margin: 20px 0px;
+    text-align: center;
+}
+.navbar h1 a,
+:visited {
+    color: #AE8201;
+    margin: 20px 0px;
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Sambosa",
+      "image": "images/image1.jpg",
+      "description": "A delicious fried pastry filled with spiced meat or vegetables."
+    },
+    {
+      "title": "Mansaf",
+      "image": "images/image3.jpg",
+      "description": "Traditional Jordanian lamb dish with yogurt and rice."
+    },
+    {
+      "title": "Bashamel",
+      "image": "images/image2.jpg",
+      "description": "Pasta layered with meat and creamy béchamel sauce."
+    },
+    {
+      "title": "Koshari",
+      "image": "images/image4.jpg",
+      "description": "Egyptian comfort food with rice, lentils, pasta, and tomato sauce."
+    }
+  ]
+  

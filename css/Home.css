@@ -25,8 +25,14 @@ body {
 .navbar h1 {
     color: #AE8201;
     margin: 20px 0px;
-    cursor: pointer;
     text-align: center;
+}
+.navbar h1 a,
+:visited {
+    color: #AE8201;
+    margin: 20px 0px;
+    text-align: center;
+    text-decoration: none;
 }
 .navbar ul li a {
     padding: 0.3em 0.8em;
@@ -55,7 +61,7 @@ li a{
 li a:hover {
     color: #c69504;
     background: #d9a3029f;
-    margin: 10px 10px;
+    /* margin: 5px 5px; */
     border-radius: 5px;
     text-decoration: none;
 }
@@ -90,7 +96,7 @@ p {
     margin: 20px auto;
 }
 .img-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.611), rgba(0,0,0,0.611)), url("../Images/main.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.477), rgba(0, 0, 0, 0.427)), url("../Images/background.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,6 +145,14 @@ p {
     color: #b8860b; 
     margin: 10px 0px;
 }
+.gallery-item h3 a,
+:visited{
+    font-size: 1.5rem;
+    color: #b8860b; 
+    margin: 10px 0px;
+    text-decoration-line: none;
+}
+
 
 .gallery-item p {
     text-align: left;
@@ -162,7 +176,7 @@ p {
 
 .footerRight {
     flex: 1;
-    max-width: 30%;
+    max-width: 20%;
 }
 #top {
     font-weight: 800;
@@ -191,6 +205,7 @@ footer p {
     text-align: left;
     color: black;
     font-weight: 300;
+    /* the default display is inline, block is basically the same but it covers 100% width */
     display: block;
     text-align: left;
 }
