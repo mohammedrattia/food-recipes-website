@@ -2,7 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const recipeId = params.get("id");
 
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-    var path = "./";
+  var path = "./";
 else var path = "/food-recipes-website/";
 
 if (recipeId == null) {
