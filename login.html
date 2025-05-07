@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let Him Cook</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1 class="header">Login</h1>
+
+        <form onsubmit="loginUser()">
+          <div class="userfield">
+            <div class="userlabel">
+              <img src="Icons/user-solid.svg" alt="" class="icon-user" />
+              <label for="username-input">Username</label>
+            </div>
+            <input
+              type="text"
+              id="username-input"
+              class="userform"
+              placeholder="Enter your Username..."
+            />
+          </div>
+          <br />
+          <div class="passfield">
+            <div class="passlabel">
+              <img src="Icons/lock-solid.svg" alt="" class="icon-pass" />
+              <label for="password-input">Password</label>
+            </div>
+            <input
+              type="password"
+              id="password-input"
+              placeholder="Enter your Password..."
+              class="Passform"
+            />
+          </div>
+          <input type="submit" class="Login btn btn-primary" value="Login" />
+          <p class="questions">Don't have an account?</p>
+          <div class="create">
+            <a href="" style="text-decoration: none; color: black"
+              >Create Account</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/login.js"></script>
+  </body>
+</html>

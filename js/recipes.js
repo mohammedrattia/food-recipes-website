@@ -1,4 +1,6 @@
 // get the tag from the url
+let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
+let currentUser = localStorage.getItem("currentUser") || "";
 const params = new URLSearchParams(window.location.search);
 const recipeTag = params.get("tag");
 
@@ -17,13 +19,20 @@ fetch(`${path}data/recipes.json`)
         recipeTag == null ||
         recipeTag == "all"
       ) {
+        if (users[currentUser].favorites.includes(recipe)) {
+          var isFav = "fa-solid";
+          var isActive = "active";
+        } else {
+          var isFav = "fa-regular";
+          var isActive = "";
+        }
         recipesText += `
-                <div class="recipe-card"  id="${recipe}">
-                    <img src="images/image${recipe}.jpg" alt="${
+                <div class="recipe-card">
+                  <img src="images/image${recipe}.jpg" alt="${
           data[recipe].name
         }">
-                    <button onclick="fav_button(this.id)" class="fav-btn" id="fav_${recipe}"><i class="fa-regular fa-heart"></i></button>
-                    <div onclick="recipe_request(this.id)" id="${recipe}">
+                  <button onclick="fav_button(this.id)" class="fav-btn ${isActive}" id="fav_${recipe}"><i class="${isFav} fa-heart"></i></button>
+                  <div onclick="recipe_request(this.id)" id="${recipe}">
                     <h2>
                     ${data[recipe].name}
                     </h2>
@@ -31,7 +40,7 @@ fetch(`${path}data/recipes.json`)
                           0,
                           300
                         )}... <u>Learn more &rarr;</u></p>
-                    </div>
+                  </div>
                 </div>
                 `;
       }
@@ -68,8 +77,6 @@ fetch(`${path}data/recipes.json`)
 // open the recipe
 function recipe_request(id) {
   window.location = `./recipe.html?id=${id}`;
-  window.innerHeight = 500;
-  window.innerWidth = 500;
 }
 
 // filter by tag
@@ -93,29 +100,21 @@ function search() {
 }
 
 function fav_button(id) {
-  // Load cached modifications from localStorage
-  // const cachedRecipes = JSON.parse(localStorage.getItem("cachedRecipes")) || {};
-
-  let btn_id = document.getElementById(id);
-  const isActive = btn_id.classList.toggle("active");
-  const icon = btn_id.querySelector("i");
-
+  let btn = document.getElementById(id);
+  const isActive = btn.classList.toggle("active");
+  const icon = btn.querySelector("i");
   // Toggle heart icon
   if (isActive) {
     icon.classList.remove("fa-regular");
     icon.classList.add("fa-solid");
-
-    // add to local storage
+    users[currentUser].favorites.push(id.slice(4, id.length));
   } else {
+    let recipe_index = users[currentUser].favorites.indexOf(
+      id.slice(4, id.length)
+    );
     icon.classList.remove("fa-solid");
     icon.classList.add("fa-regular");
-    // remove from local storage
+    users[currentUser].favorites.splice(recipe_index, 1);
   }
-
-  // Add animation
-  this.classList.add("animate");
-  setTimeout(() => this.classList.remove("animate"), 500);
-
-  // Save back to localStorage
-  // localStorage.setItem("cachedRecipes", JSON.stringify(cachedRecipes));
+  localStorage.setItem("MyUsers", JSON.stringify(users));
 }
