@@ -79,12 +79,12 @@ li a:hover {
 .search-container div {
   margin: 12px;
   border: 2px solid #c7c7c7;
-  border-radius: 6px;
+  border-radius: 30px;
 }
 
 .search-container input {
   width: 90%;
-  margin-right: 0;
+  margin-right: 0px;
   padding: 10px 0px;
   font-size: 18px;
   border: none;
@@ -136,11 +136,12 @@ li a:hover {
 }
 
 .but button:hover {
+  cursor: pointer;
   background-color: #d5d5d5;
 }
 
 .vertical-line {
-  border-left: 4px solid #ccc;
+  border-left: 3px solid #ccc;
   margin: 0 48px;
 }
 
@@ -157,11 +158,14 @@ li a:hover {
   padding: 10px;
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .recipe-card:hover {
-  background-color: #f8f8f8;
+  background-color: #e9e9e9;
   cursor: pointer;
+  border-radius: 15px;
+  transform: scale(1.01);
 }
 
 .recipe-card a {
@@ -179,11 +183,15 @@ li a:hover {
 .recipe-card h2 {
   margin: 0;
   color: #ae8201;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .recipe-card p {
   margin: 8px 0 0;
   color: #525252;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Heart Button Styles */
@@ -193,7 +201,7 @@ li a:hover {
   cursor: pointer;
   /* padding: 8px; */
   font-size: 1.5rem;
-  color: #ae8201;
+  color: rgb(239, 0, 84);
   transition: all 0.3s ease;
   outline: none;
 }
