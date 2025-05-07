@@ -79,7 +79,7 @@ li a:hover {
 .search-container div {
   margin: 12px;
   border: 2px solid #c7c7c7;
-  border-radius: 6px;
+  border-radius: 30px;
 }
 
 .search-container input {
@@ -157,11 +157,14 @@ li a:hover {
   padding: 10px;
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .recipe-card:hover {
   background-color: #f8f8f8;
   cursor: pointer;
+  border-radius: 15px;
+  transform: scale(1.01);
 }
 
 .recipe-card a {
@@ -174,16 +177,22 @@ li a:hover {
   object-fit: cover;
   aspect-ratio: 1/1;
   border-radius: 10px;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .recipe-card h2 {
   margin: 0;
   color: #ae8201;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .recipe-card p {
   margin: 8px 0 0;
   color: #525252;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Heart Button Styles */
@@ -196,6 +205,8 @@ li a:hover {
   color: #ae8201;
   transition: all 0.3s ease;
   outline: none;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Hover effect */

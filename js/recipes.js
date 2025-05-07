@@ -91,7 +91,11 @@ function search() {
     }
   }
 }
+
 function fav_button(id) {
+  // Load cached modifications from localStorage
+  // const cachedRecipes = JSON.parse(localStorage.getItem("cachedRecipes")) || {};
+
   let btn_id = document.getElementById(id);
   const isActive = btn_id.classList.toggle("active");
   const icon = btn_id.querySelector("i");
@@ -111,4 +115,7 @@ function fav_button(id) {
   // Add animation
   this.classList.add("animate");
   setTimeout(() => this.classList.remove("animate"), 500);
+
+  // Save back to localStorage
+  // localStorage.setItem("cachedRecipes", JSON.stringify(cachedRecipes));
 }
