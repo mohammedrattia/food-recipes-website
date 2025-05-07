@@ -1,14 +1,7 @@
 body {
-<<<<<<< HEAD
-    background-color: white;
-    margin: 0;
-    font-family: sans-serif;
-    min-height: 100vh;
-=======
   background-color: white;
   margin: 0;
   font-family: Montserrat, sans-serif;
->>>>>>> a9f0c54cab5bf0e233f3404f83619970cc178ab3
 }
 
 .header {
@@ -23,24 +16,10 @@ body {
   border-bottom: 1px solid #0000004e;
 }
 .navbar h1 {
-<<<<<<< HEAD
-    color: #AE8201;
-    margin: 20px 0px;
-    text-align: center;
-    font-weight: 700;
-}
-.navbar h1 a,
-:visited {
-    color: #AE8201;
-    margin: 20px 0px;
-    text-align: center;
-    text-decoration: none;
-=======
   color: #ae8201;
   margin: 20px 0px;
   cursor: pointer;
   text-align: center;
->>>>>>> a9f0c54cab5bf0e233f3404f83619970cc178ab3
 }
 .navbar ul li a {
   padding: 0.3em 0.8em;
@@ -52,17 +31,6 @@ h1 {
   color: #ae8201;
 }
 ul {
-<<<<<<< HEAD
-    display: flex;
-    list-style-type: none;
-    gap: 38px;
-}
-li {
-    font-size: 18px;
-    /* margin: 16px 8px; */
-    transition: all 0.3 ease;
-    /* padding 16px 14px; */
-=======
   display: flex;
   list-style-type: none;
   gap: 20px;
@@ -72,26 +40,17 @@ li {
   margin: 16px 8px;
   transition: all 0.3 ease;
   /* padding 16px 14px; */
->>>>>>> a9f0c54cab5bf0e233f3404f83619970cc178ab3
 }
 li a {
   color: #c69504c9;
   text-decoration: none;
 }
 li a:hover {
-<<<<<<< HEAD
-    color: #c69504;
-    background: #d9a3029f;
-    /* margin: 5px 5px; */
-    border-radius: 5px;
-    text-decoration: none;
-=======
   color: #c69504;
   background: #d9a3029f;
   margin: 10px 10px;
   border-radius: 5px;
   text-decoration: none;
->>>>>>> a9f0c54cab5bf0e233f3404f83619970cc178ab3
 }
 .rec-btn {
   margin-left: 20px;
