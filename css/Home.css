@@ -126,7 +126,7 @@ p {
     gap: 40px;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1500px;
+    max-width: 1300px;
 }
 .gallery-item {
     width: 220px;
