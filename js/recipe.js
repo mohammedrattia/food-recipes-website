@@ -1,3 +1,5 @@
+let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
+let currentUser = localStorage.getItem("currentUser") || "";
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get("id");
 
@@ -25,33 +27,19 @@ if (recipeId == null) {
         "title"
       )[0].innerHTML = `${data[recipeId].name}`;
 
+      if (users[currentUser].favorites.includes(recipeId)) {
+        var isFav = "fa-solid";
+        var isActive = "active";
+      } else {
+        var isFav = "fa-regular";
+        var isActive = "";
+      }
+
       document.getElementById("article-title").innerHTML = `
-      <h1>${data[recipeId].name}<button class="fav-btn"><i class="fa-regular fa-heart"></i></button></h1> 
-      `;
-
-      document.querySelectorAll(".fav-btn").forEach((button) => {
-        button.addEventListener("click", function (e) {
-          e.stopPropagation(); // Prevent triggering the card click
-          const recipeId = this.getAttribute("data-recipe");
-          const isActive = this.classList.toggle("active");
-          const icon = this.querySelector("i");
-
-          // Toggle heart icon
-          if (isActive) {
-            icon.classList.remove("fa-regular");
-            icon.classList.add("fa-solid");
-            localStorage.setItem(`fav_${recipeId}`, "true");
-          } else {
-            icon.classList.remove("fa-solid");
-            icon.classList.add("fa-regular");
-            localStorage.setItem(`fav_${recipeId}`, "false");
-          }
-
-          // Add animation
-          this.classList.add("animate");
-          setTimeout(() => this.classList.remove("animate"), 500);
-        });
-      });
+      <h1>${data[recipeId].name}
+      <button onclick="fav_button(this.id)" class="fav-btn ${isActive}" id="fav_${recipeId}"><i class="${isFav} fa-heart"></i></button>
+      </h1>`;
+      // <button class="fav-btn"><i class="fa-regular fa-heart"></i></button></h1>
 
       document.getElementById(
         "description"
@@ -86,3 +74,22 @@ fetch('footer.html')
 .then(data => {
   document.getElementById('footer-placeholder').innerHTML = data;
 });
+function fav_button(id) {
+  let btn = document.getElementById(id);
+  const isActive = btn.classList.toggle("active");
+  const icon = btn.querySelector("i");
+  // Toggle heart icon
+  if (isActive) {
+    icon.classList.remove("fa-regular");
+    icon.classList.add("fa-solid");
+    users[currentUser].favorites.push(id.slice(4, id.length));
+  } else {
+    let recipe_index = users[currentUser].favorites.indexOf(
+      id.slice(4, id.length)
+    );
+    icon.classList.remove("fa-solid");
+    icon.classList.add("fa-regular");
+    users[currentUser].favorites.splice(recipe_index, 1);
+  }
+  localStorage.setItem("MyUsers", JSON.stringify(users));
+}
