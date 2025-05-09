@@ -14,7 +14,7 @@
     --input-color:  rgb(83, 83, 83);
     --text-button-color: rgb(255, 255, 255);
     --button-hover-color: rgb(83, 83, 83);
-    background-image: url(/Photos/Login\ Dark.jpg);
+    background-image: url(../images/Login\ Dark.jpg);
 }
 *{
     margin: 0;
@@ -28,7 +28,7 @@ html{
 }
 body{
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.158),rgba(0, 0, 0, 0.158)), url(/Photos/Login\ Light.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.158),rgba(0, 0, 0, 0.158)), url(../images/Login\ Light.jpg);
     background-size: cover;
     background-position: right;
     overflow: hidden;
