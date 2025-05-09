@@ -183,3 +183,10 @@ a:hover{
 .content button{
     color: var(--text-button-color);
 }
+#switch-themes{
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+#switch-themes:hover{
+    transform: scale(1.05);
+}
