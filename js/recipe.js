@@ -73,3 +73,16 @@ if (recipeId == null) {
       console.error("Error loading JSON:", error);
     });
 }
+// add footer and navbar
+fetch('navbar.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('navbar-placeholder').innerHTML = data;
+});
+
+// Load Footer
+fetch('footer.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('footer-placeholder').innerHTML = data;
+});
