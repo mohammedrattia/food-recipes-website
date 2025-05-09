@@ -79,16 +79,15 @@ body{
     box-shadow: 0 0 15px black;
 }
 h1{
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 900px;
-    text-transform: uppercase;
-    transform: translateY(-30px);
+    transform: translateY(-80px);
     color: var(--text-color);
 }
 h5{
     font-size: 1.125rem;
     color: rgb(183, 183, 183);
-    transform: translateY(-55px);
+    transform: translateY(-90px);
 }
 form{
     width: min(400px,100%);
