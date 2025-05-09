@@ -129,8 +129,6 @@ form input{
     border: 2px solid var(--input-color);
     border-left: none;
     background-color: var(--input-color);
-    transition: 150ms ease;
-    transition: transform 0.2s ease;
 }
 form input:hover{
     border-color: var(--accent-color);
@@ -138,9 +136,6 @@ form input:hover{
 form input:focus{
     outline: none;
     border-color: var(--accent-color);
-}
-form input:focus-within{
-    transform: scale(1.05);
 }
 form input::placeholder{
     color: var(--text-color);
