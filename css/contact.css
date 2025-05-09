@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+.navbar-container .navbar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 0 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid #0000004e;
+    /* position: fixed; */
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar-container .navbar-title {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.navbar-container .navbar-title a {
+    color: #AE8201;
+    text-decoration: none;
+}
+
+.navbar-container .navbar-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-container .navbar-links li {
+    font-size: 18px;
+    margin: 16px 8px;
+}
+
+.navbar-container .navbar-links li a {
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #c69504c9;
+    transition: background 0.3s ease;
+}
+
+.navbar-container .navbar-links li a:hover {
+    color: #c69504;
+    background: #d9a3029f;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px;
+}
+
+.contact-lift {
+    width: 45%;
+}
+
+.contact-us {
+    width: 45%;
+}
+
+.contact-inputs {
+    
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(174, 130, 1, 0.09);
+    margin-left: 150px;
+
+}
+.contact-us textarea{
+    height: 140px;
+    padding-top: 15px;
+    resize: none;
+}
+.contact-us{
+    margin-bottom: 150px;
+    margin-right: 100px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    padding: 10Px 20px;
+    font-size: 16px;
+    margin-left: 150px;
+    background: #c69504c9;
+    transition: all 0.3s ease;
+    border: 2px solid #daa401;
+    border-radius: 3px;
+    color: papayawhip;
+    cursor: pointer;
+}
+.contact-lift h1{
+    color:#AE8201;
+    font-size: 50px;
+}
+.contact-lift h3{
+    font-size: 20px;
+}
+.contact-lift{
+    margin-left: 100px;
+}
+
+.contact-us label{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    margin-left: 150px;
+    margin-bottom: 5px;
+}
+.contact-lift{
+    margin-bottom: 250px;
+}
+/* .contact-us button:focus {
+    background-color:#ffffff;
+    border: 2px solid #daa401;
+    border-radius: 3px;
+  } */
+ .btn:hover{
+    background: #d9a3029f;
+    border-radius: 3px;
+    text-decoration: none;
+
+}
+.popup {
+    width: 400px;
+    background: whitesmoke;
+    border-radius: 3px;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    color: #333;
+    margin: auto;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s , top 0.4s;
+
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%)scale(1);
+
+}
+
+.popup img {
+    width: 100px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 100%;
+    background: #6fd649;
+    border: none;
+    margin-top: 50px;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 18px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.ok:hover{
+    background: #58af39;
+    border-radius: 3px;
+    text-decoration: none;
+} 
+.footer {
+    flex-shrink: 0;
+    background-color: rgba(255, 239, 213, 0.436);
+    border-top: 2px solid #0000004e;
+    /* height: 30vh; */
+    min-height: 30vh;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerLeft {
+    flex: 1;
+    max-width: 40%;
+}
+
+.footerRight {
+    flex: 1;
+    max-width: 20%;
+}
+
+.footer h4 {
+    font-size: 1.7rem;
+    padding: 10px;
+    color: #AE8201; 
+}
+
+.footer h6 {
+    padding: 10px;
+    word-spacing: 3px;
+}
+
+.footer p {
+    text-align: left;
+    color: black;
+    font-weight: 300;
+    display: block;
+    margin: 10px;
+}
+
+
+.footer .footerRight p a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer .footerRight p a:hover {
+    text-decoration: underline;
+}
+
+#top {
+    font-weight: 800;
+}
