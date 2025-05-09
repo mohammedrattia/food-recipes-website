@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --accent-color: rgb(219, 176, 3);
+    --text-color:  rgb(0, 64, 109);
+    --base-color:   rgb(255, 255, 255);
+    --input-color:  rgb(244, 243, 243);
+    --button-hover-color: rgb(0, 64, 109);
+    --text-button-color: rgb(255, 255, 255);
+}
+.darkmode{
+    --accent-color: rgb(134, 103, 165);
+    --text-color:  rgb(255, 255, 255);
+    --base-color:   rgb(40, 40, 40);
+    --input-color:  rgb(83, 83, 83);
+    --text-button-color: rgb(255, 255, 255);
+    --button-hover-color: rgb(83, 83, 83);
+    background-image: url(/Photos/Dark\ 5.jpg);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Poppins;
+    font-size: 12px;
+    color: var(--text-color);
+    text-align: center;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.158),rgba(0, 0, 0, 0.158)), url(/Photos/6.jpg);
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+}
+#switch-themes{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: 0;
+}
+#switch-themes svg{
+    fill: var(--text-button-color);
+}
+#switch-themes svg:first-child{
+    display: none;    
+}
+.darkmode #switch-themes svg:last-child{
+    display: none;
+}
+.darkmode #switch-themes svg:first-child{
+    display:block;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+.content{
+    background-color: var(--base-color);
+    height: 600px;
+    width: 450px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px black;
+}
+h1{
+    font-size: 7rem;
+    font-weight: 900px;
+    text-transform: uppercase;
+    transform: translateY(-30px);
+    color: var(--text-color);
+}
+h5{
+    font-size: 1.125rem;
+    color: rgb(183, 183, 183);
+    transform: translateY(-55px);
+}
+form{
+    width: min(400px,100%);
+    /* margin-top: 20px; */
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;   
+}
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+form input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+    transition: transform 0.2s ease;
+}
+form input:hover{
+    border-color: var(--accent-color);
+}
+form input:focus{
+    outline: none;
+    border-color: var(--accent-color);
+}
+form input:focus-within{
+    transform: scale(1.05);
+}
+form input::placeholder{
+    color: var(--text-color);
+}
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 400px;
+    height: 45px;
+    padding: 0.85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+form button:hover{
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+p{
+    color: var(--text-color);
+}
+a{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+a:hover{
+    text-decoration: underline;
+}
+.logform{
+    transition: transform 0.2s ease;
+}
+.logform:focus-within{
+    transform: scale(1.05);
+}
+.content button{
+    color: var(--text-button-color);
+}
