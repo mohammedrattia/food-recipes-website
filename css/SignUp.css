@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --accent-color: rgb(174, 131, 1);
   --base-color: white;
-  --text-color: #2e2b41;
-  --input-color: #f3f0ff;
+  --text-color: #2E2B41;
+  --input-color: #F3F0FF;
 }
 
 * {
@@ -21,8 +21,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-    url(../images/background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../images/background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +31,7 @@ body {
 .wrapper {
   box-sizing: border-box;
   background-color: var(--base-color);
-  height: 500px;
+  height: 600px;
   width: 500px;
   padding: 10px;
   border-radius: 20px;
@@ -62,14 +61,14 @@ form {
   gap: 10px;
 }
 
-form > div {
+form>div {
   width: 100%;
   display: flex;
   justify-content: center;
   transition: transform 0.2s ease;
 }
 
-form > div:focus-within {
+form>div:focus-within {
   transform: scale(1.05);
 }
 
@@ -107,11 +106,39 @@ form input:focus {
   border-color: var(--accent-color);
 }
 
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 16px;
+  height: 13px;
+  text-align: left;
+  padding-left: 60px;
+  /* Indent to align with input field */
+}
+
 form button {
   margin-top: 10px;
   border: none;
   border-radius: 1000px;
-  padding: 0.85em 4em;
+  padding: .85em 4em;
   background-color: var(--accent-color);
   color: var(--base-color);
   font: inherit;
@@ -136,5 +163,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: var(--text-color);
 }

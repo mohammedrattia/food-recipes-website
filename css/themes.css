@@ -51,12 +51,15 @@
   --orange-dark: #845e20;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
-  --dark: #103741; /* Dark teal for text and important elements */
-  --dark-light: rgba(16, 55, 65, 0.7); /* Semi-transparent dark */
+  --dark: #103741;
+  /* Dark teal for text and important elements */
+  --dark-light: rgba(16, 55, 65, 0.7);
+  /* Semi-transparent dark */
   --primary-text: #2a2a2a;
   /* --secondary-text: hsl(60, 1%, 45%);  */
   /* Gray for secondary text */
-  --secondary-text: hsla(0, 0%, 0%, 0.69); /* Gray for secondary text */
+  --secondary-text: hsla(0, 0%, 0%, 0.69);
+  /* Gray for secondary text */
 
   /* fonts  */
   --headingFont: "Cal Sans", sans-serif;
@@ -99,7 +102,7 @@
 body {
   font-family: var(--bodyFont);
   /* background-color: var(--backgroundColor-secondary); */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin: 0;
   padding: 0;
 }
@@ -108,6 +111,7 @@ h1 {
   color: var(--heading-textColor);
   font-family: var(--headingFont);
 }
+
 p {
   color: var(--primary-textColor);
 }

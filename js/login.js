@@ -1,4 +1,5 @@
-function loginUser() {
+function loginUser(event) {
+  event.preventDefault();
   let users = JSON.parse(localStorage.getItem("MyUsers"));
   let currentUser = localStorage.getItem("currentUser") || "";
   let username = document.getElementById("username-input").value;
@@ -13,12 +14,14 @@ function loginUser() {
   ) {
     currentUser = username;
     localStorage.setItem("currentUser", currentUser);
+    window.location.replace("./index.html");
+    console.log("ay 7aga");
   } else {
     not_existed_user();
   }
-}
+};
 
 // edit the function to show alert message if the username already exists
 function not_existed_user() {
   alert("Enter Valid Credentials");
-}
+};
