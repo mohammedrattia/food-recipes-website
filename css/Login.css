@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-    --accent-color: rgb(219, 176, 3);
-    --text-color:  rgb(0, 64, 109);
+    --accent-color: var(--primary-600);
+    --text-color:  var(--grey-600);
     --base-color:   rgb(255, 255, 255);
     --input-color:  rgb(244, 243, 243);
-    --button-hover-color: rgb(0, 64, 109);
+    --button-hover-color: rgb(83, 83, 83);
     --text-button-color: rgb(255, 255, 255);
 }
 .darkmode{
-    --accent-color: rgb(134, 103, 165);
-    --text-color:  rgb(255, 255, 255);
+    --accent-color: var(--primary-600);
+    --text-color:  var(--grey-200);
     --base-color:   rgb(40, 40, 40);
     --input-color:  rgb(83, 83, 83);
     --text-button-color: rgb(255, 255, 255);
@@ -20,11 +20,11 @@
     margin: 0;
     padding: 0;
 }
-html{
-    font-family: Poppins;
-    font-size: 12px;
-    color: var(--text-color);
-    text-align: center;
+html {
+  font-family: Poppins, Sego UI, sans-serif;
+  font-size: 10.5pt;
+  color: var(--text-color);
+  text-align: center;
 }
 body{
     min-height: 100vh;
@@ -64,7 +64,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 35px; */
+    margin-top: 35px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -75,28 +75,32 @@ body{
     height: 550px;
     width: 500px;
     padding: 10px;
+    padding-bottom: 60px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 15px black;
+    font-family: poppins;
+    box-sizing: border-box;
+    /* margin-bottom: 10px; */
 }
 h1{
     font-size: 4rem;
     font-weight: 900px;
-    transform: translateY(-50px);
+    transform: translateY(-80px);
     color: var(--text-color);
 }
 h5{
     font-size: 1.125rem;
     color: rgb(133, 133, 133);
-    transform: translateY(-60px);
+    transform: translateY(-90px);
 }
 form{
     width: min(400px,100%);
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,8 +151,8 @@ form input::placeholder{
 form button{
     margin-top: 10px;
     border: none;
-    border-radius: 10px;
-    width: 400px;
+    border-radius: 1000px;
+    width: 200px;
     height: 45px;
     padding: 0.85em 4em;
     background-color: var(--accent-color);
@@ -158,6 +162,7 @@ form button{
     text-transform: uppercase;
     cursor: pointer;
     transition: transform 0.2s ease;
+    /* transform: translateY(15px); */
 }
 form button:hover{
     background-color: var(--button-hover-color);
@@ -165,6 +170,7 @@ form button:hover{
 }
 p{
     color: var(--text-color);
+    font: inherit;
 }
 a{
     text-decoration: none;
