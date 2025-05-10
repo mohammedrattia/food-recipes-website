@@ -23,3 +23,12 @@ function login_or_out() {
   }
   // localStorage.setItem("currentUser", currentUser);
 }
+
+function jawn() {
+  localStorage.removeItem("currentUser");
+  // loginBtn.textContent = (loginBtn.textContent === "Login") ? "Logout" : "Login";
+  // if(loginBtn.textContent === "Logout"){
+  // }
+  console.log("Malek a7san mn Mada -Ragab")
+};
+// const loginBtn = document.getElementById("login-btn");
