@@ -11,7 +11,7 @@ fetch(`${path}data/recommendations.json`)
       card.innerHTML = `
         <img src="${recipe.image}" alt="${recipe.title}">
         <div class="gallery-item-content">
-          <h3><a href="recipes.html">${recipe.title}</a></h3>
+        <h3><a href="recipe.html?id=${recipe.id}">${recipe.title}</a></h3>
           <p>${recipe.description}</p>
         </div>
       `;

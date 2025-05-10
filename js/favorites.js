@@ -93,7 +93,6 @@ function search() {
     }
   }
 }
-
 function fav_button(id) {
   let btn = document.getElementById(id);
   const isActive = btn.classList.toggle("active");
@@ -113,3 +112,16 @@ function fav_button(id) {
   }
   localStorage.setItem("MyUsers", JSON.stringify(users));
 }
+// footer and navbar
+fetch('navbar.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('navbar-placeholder').innerHTML = data;
+});
+
+// Load Footer
+fetch('footer.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('footer-placeholder').innerHTML = data;
+});

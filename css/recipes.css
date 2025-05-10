@@ -1,7 +1,6 @@
 * {
   box-sizing: content-box;
 }
-
 .footerContainer,
 .footer,
 .navbar-container,
@@ -135,7 +134,10 @@
   /* background-color: var(--backgroundColor-2); */
   transform: scale(1.1);
 }
-
+.general .tag-session h2 {
+  color: var(--primary-600);
+  padding-bottom: 10px;
+}
 .vertical-line {
   border-left: 4px solid var(--textColor-1);
   margin: 0 48px;
@@ -172,7 +174,6 @@
 .recipe-card > * {
   will-change: auto;
 }
-
 .recipe-card a {
   text-decoration: none;
 }
@@ -185,13 +186,20 @@
   border-radius: 10px;
   backface-visibility: hidden;
   position: relative;
+  will-change: auto;
 }
 
 .recipe-card h2 {
   margin: 0;
-  color: var(--textColor-1);
+  color: var(--textColor-2);
   will-change: transform;
   backface-visibility: hidden;
+  will-change: auto;
+}
+
+.recipe-card a {
+  text-decoration: none;
+  will-change: auto;
 }
 
 .recipe-card p {
@@ -199,6 +207,7 @@
   color: var(--textColor-3);
   will-change: transform;
   backface-visibility: hidden;
+  will-change: auto;
 }
 
 /* Heart Button Styles */
