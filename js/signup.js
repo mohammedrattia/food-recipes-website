@@ -6,7 +6,6 @@ function addUser() {
   let username = document.getElementById("username").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-  let confirmPassword = document.getElementById("confirm-password").value;
   let user = {
     email: email,
     username: username,
