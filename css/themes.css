@@ -55,10 +55,10 @@
   /* Dark teal for text and important elements */
   --dark-light: rgba(16, 55, 65, 0.7);
   /* Semi-transparent dark */
-  --primary-text: #2a2a2a;
+  --primary-textColor: #2a2a2a;
   /* --secondary-text: hsl(60, 1%, 45%);  */
   /* Gray for secondary text */
-  --secondary-text: hsla(0, 0%, 0%, 0.69);
+  --secondary-textColor: hsla(0, 0%, 0%, 0.69);
   /* Gray for secondary text */
 
   /* fonts  */
@@ -67,8 +67,8 @@
   --smallText: 0.7em;
   /* rest of the vars */
   --backgroundColor: var(--grey-50);
-  --backgroundColor-secondary: var(--secondary);
-  --textColor: var(--primary-text);
+  --backgroundColor-secondary: rgba(255, 238, 229);
+  --textColor: var(--primary-textColor);
   --heading-textColor: var(--primary-600);
   --btn: var(--primary-500);
   --btn-hover: var(--primary-600);
@@ -81,7 +81,7 @@
   --weight-1: 400;
   --weight-2: 500;
   --weight-3: 600;
-  
+
   /* edit those for dark and light theme */
   /* fonts colors */
   --textColor-1: var(--heading-textColor);
@@ -91,7 +91,8 @@
   /* other colors */
   --backgroundColor-1: var(--white);
   --backgroundColor-2: var(--grey-50);
-  --backgroundColor-3: var(--backgroundColor-secondary);
+  --backgroundColor-3: var(--secondary);
+  --backgroundColor-4: var(--backgroundColor-secondary);
 
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -112,17 +113,18 @@
 
 body {
   font-family: var(--bodyFont);
-  /* background-color: var(--backgroundColor-secondary); */
+  background-color: var(--backgroundColor-1);
   /* min-height: 100vh; */
   margin: 0;
   padding: 0;
+  margin-top: 110px;
 }
 
 h1 {
-  color: var(--heading-textColor);
+  color: var(--textColor-1);
   font-family: var(--headingFont);
 }
 
 p {
-  color: var(--primary-textColor);
+  color: var(--textColor-2);
 }

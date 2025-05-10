@@ -19,8 +19,10 @@ fetch(`${path}data/recipes.json`)
         recipeTag == null ||
         recipeTag == "all"
       ) {
-
-        if (users.hasOwnProperty(currentUser) && users[currentUser].favorites.includes(recipe)) {
+        if (
+          users.hasOwnProperty(currentUser) &&
+          users[currentUser].favorites.includes(recipe)
+        ) {
           var isFav = "fa-solid";
           var isActive = "active";
         } else {
@@ -29,9 +31,7 @@ fetch(`${path}data/recipes.json`)
         }
         recipesText += `
         <div class="recipe-card">
-        <img src="images/image${recipe}.jpg" alt="${
-          data[recipe].name
-        }">
+        <img src="images/image${recipe}.jpg" alt="${data[recipe].name}">
                   <button onclick="fav_button(this.id)" class="fav-btn ${isActive}" id="fav_${recipe}"><i class="${isFav} fa-heart"></i></button>
                   <div onclick="recipe_request(this.id)" id="${recipe}">
                     <h2>
@@ -58,15 +58,15 @@ fetch(`${path}data/recipes.json`)
     }
     tagList = Array.from(tagList).sort();
 
-    let tags = `<button id="all" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> all</button>`;
+    let tags = `<button id="all" onclick="tag_filter(this.id)" style="${!recipeTag || recipeTag === 'all' ? 'background-color: var(--textColor-1); color: var(--backgroundColor-1);' : ''}"><i class="fa-solid fa-plus"></i> all</button>`;
     for (const tag of tagList) {
       if (tag == recipeTag) {
         tags += `
-                <button id="all" onclick="tag_filter(this.id)" style="background-color: #b0b0b0;">
-                    <img src="images/plus-solid.svg"> ${tag}
+                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--backgroundColor-1);">
+                    <i class="fa-solid fa-plus"></i> ${tag}
                 </button>`;
       } else
-        tags += `<button id="${tag}" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> ${tag}</button>`;
+        tags += `<button id="${tag}" onclick="tag_filter(this.id)"><i class="fa-solid fa-plus"></i> ${tag}</button>`;
     }
 
     document.getElementsByClassName("but")[0].innerHTML = tags;

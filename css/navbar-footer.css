@@ -1,12 +1,14 @@
 .navbar-container .navbar {
+  top: 0;
   display: flex;
-  background: var(--backgroundColor-secondary);
+  background: var(--backgroundColor-4);
   padding: 0 20px;
   align-items: center;
   justify-content: space-between;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   z-index: 9999;
+  box-shadow: var(--shadow-2);
 }
 
 .navbar-container .navbar-title {
@@ -17,6 +19,7 @@
 .navbar-container .navbar-title a {
   color: var(--heading-textColor);
   font-family: var(--headingFont);
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -48,10 +51,14 @@
 }
 
 .footer {
+  position: relative;
   background-color: var(--backgroundColor-secondary);
   /* border-top: 2px solid #0000004e; */
   /* box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.15), 0 -4px 20px 0 rgba(0, 0, 0, 0.1); */
   min-height: 30vh;
+  width: 100%;
+  margin-top: auto;
+  /* bottom: 0; */
 }
 
 .footerContainer {

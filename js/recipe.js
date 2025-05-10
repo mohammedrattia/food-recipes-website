@@ -8,14 +8,14 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1")
 else var path = "/food-recipes-website/";
 
 if (recipeId == null) {
-  document.body.innerHTML = `<h1>Error: No recipe ID provided</h1>
+  document.getElementById("article-title").innerHTML = `<h1>Error: No recipe ID provided</h1>
     <p>Example: <code>recipe.html?id=1</code></p>`;
 } else {
   fetch(`${path}data/recipes.json`)
     .then((response) => response.json())
     .then((data) => {
       if (!data[recipeId]) {
-        document.body.innerHTML = `<h1>Recipe not found</h1>
+        document.getElementById("article-title").innerHTML = `<h1>Recipe not found</h1>
                                     <p>No recipe with ID <strong>${recipeId}</strong> exists.</p>`;
       }
 
@@ -43,10 +43,10 @@ if (recipeId == null) {
 
       document.getElementById(
         "description"
-      ).innerHTML = `<h1>Description</h1><hr>
+      ).innerHTML = `<h2>Description</h2><hr>
         <p>${data[recipeId].description}</p>`;
 
-      let ingredientsText = `<h1>Ingredients</h1><hr><ul>`;
+      let ingredientsText = `<h2>Ingredients</h2><hr><ul>`;
       let ingredients = data[recipeId].ingredients;
       for (let i = 0; i < ingredients.length; i++) {
         ingredientsText += "<li>" + ingredients[i] + "</li>";
@@ -54,7 +54,7 @@ if (recipeId == null) {
       ingredientsText += "</ul>";
       document.getElementById("ingredients").innerHTML = ingredientsText;
 
-      document.getElementById("method").innerHTML = `<h1>Method</h1><hr>
+      document.getElementById("method").innerHTML = `<h2>Method</h2><hr>
         <p>${data[recipeId].method}</p>`;
     })
     .catch((error) => {
