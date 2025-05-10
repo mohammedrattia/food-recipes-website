@@ -8,14 +8,18 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1")
 else var path = "/food-recipes-website/";
 
 if (recipeId == null) {
-  document.getElementById("article-title").innerHTML = `<h1>Error: No recipe ID provided</h1>
+  document.getElementById(
+    "article-title"
+  ).innerHTML = `<h1>Error: No recipe ID provided</h1>
     <p>Example: <code>recipe.html?id=1</code></p>`;
 } else {
   fetch(`${path}data/recipes.json`)
     .then((response) => response.json())
     .then((data) => {
       if (!data[recipeId]) {
-        document.getElementById("article-title").innerHTML = `<h1>Recipe not found</h1>
+        document.getElementById(
+          "article-title"
+        ).innerHTML = `<h1>Recipe not found</h1>
                                     <p>No recipe with ID <strong>${recipeId}</strong> exists.</p>`;
       }
 
@@ -27,7 +31,10 @@ if (recipeId == null) {
         "title"
       )[0].innerHTML = `${data[recipeId].name}`;
 
-      if (users[currentUser].favorites.includes(recipeId)) {
+      if (
+        users.hasOwnProperty(currentUser) &&
+        users[currentUser].favorites.includes(recipeId)
+      ) {
         var isFav = "fa-solid";
         var isActive = "active";
       } else {
@@ -64,6 +71,7 @@ if (recipeId == null) {
 
 function fav_button(id) {
   let btn = document.getElementById(id);
+  if (!makeFavorite()) return;
   const isActive = btn.classList.toggle("active");
   const icon = btn.querySelector("i");
   // Toggle heart icon
@@ -80,4 +88,16 @@ function fav_button(id) {
     users[currentUser].favorites.splice(recipe_index, 1);
   }
   localStorage.setItem("MyUsers", JSON.stringify(users));
+}
+
+function makeFavorite() {
+  let currentUser = localStorage.getItem("currentUser");
+  let users = JSON.parse(localStorage.getItem("MyUsers"));
+
+  if (users.hasOwnProperty(currentUser) && currentUser) {
+    return true;
+  } else {
+    window.location = `./login.html`;
+    return false;
+  }
 }
