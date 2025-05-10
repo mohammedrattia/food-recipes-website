@@ -51,9 +51,7 @@ fetch(`${path}data/recipes.json`)
     let tagList = new Set();
     for (const recipe in data) {
       for (const tag of data[recipe].tags) {
-        if (!/favorite/i.test(tag)) {
           tagList.add(tag);
-        }
       }
     }
     tagList = Array.from(tagList).sort();
@@ -66,7 +64,7 @@ fetch(`${path}data/recipes.json`)
     for (const tag of tagList) {
       if (tag == recipeTag) {
         tags += `
-                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--white);">
+                <button id="${tag}" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--white);">
                     <i class="fa-solid fa-plus"></i> ${tag}
                 </button>`;
       } else
