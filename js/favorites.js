@@ -45,7 +45,7 @@ fetch(`${path}data/recipes.json`)
     document.getElementsByClassName("recipes")[0].innerHTML = recipesText;
 
     let tagList = new Set();
-    let tags = `<button id="all" onclick="tag_filter(this.id)" style="${!recipeTag || recipeTag === 'all' ? 'background-color: var(--textColor-1); color: var(--backgroundColor-1);' : ''}"><i class="fa-solid fa-plus"></i> all</button>`;
+    let tags = `<button id="all" onclick="tag_filter(this.id)" style="${!recipeTag || recipeTag === 'all' ? 'background-color: var(--textColor-1); color: var(--white);' : ''}"><i class="fa-solid fa-plus"></i> all</button>`;
     for (const recipe in data) {
       for (const tag of data[recipe].tags) {
         tagList.add(tag);
@@ -56,7 +56,7 @@ fetch(`${path}data/recipes.json`)
       if (tag == recipeTag) {
         console.log(tag);
         tags += `
-                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--backgroundColor-1);">
+                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--white);">
                     <i class="fa-solid fa-plus"></i> ${tag}
                 </button>`;
       } else

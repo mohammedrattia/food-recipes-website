@@ -60,13 +60,13 @@ fetch(`${path}data/recipes.json`)
 
     let tags = `<button id="all" onclick="tag_filter(this.id)" style="${
       !recipeTag || recipeTag === "all"
-        ? "background-color: var(--textColor-1); color: var(--backgroundColor-1);"
+        ? "background-color: var(--textColor-1); color: var(--white);"
         : ""
     }"><i class="fa-solid fa-plus"></i> all</button>`;
     for (const tag of tagList) {
       if (tag == recipeTag) {
         tags += `
-                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--backgroundColor-1);">
+                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--white);">
                     <i class="fa-solid fa-plus"></i> ${tag}
                 </button>`;
       } else

@@ -3,6 +3,16 @@
     padding-right: var(--step-6);
     background-color: var(--backgroundColor-3);
     } */
+
+/* .darkmode{
+  --accent-color: var(--primary-600);
+  --text-color: var(--grey-200);
+  --base-color: rgb(40, 40, 40);
+  --input-color: rgb(83, 83, 83);
+  --text-button-color: rgb(255, 255, 255);
+  --button-hover-color: rgb(83, 83, 83);
+} */
+
 body {
   margin-top: 80px;
 }

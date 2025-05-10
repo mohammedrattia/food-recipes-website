@@ -22,7 +22,7 @@ p {
 }
 .content p,
 .content li {
-  color: black;
+  color: var(--textColor-2);
   font-size: 1.2rem;
 }
 .content hr {
@@ -122,14 +122,13 @@ button:active {
 } */
 /* Heart Button Styles */
 .fav-btn {
-  background: transparent;
   border: none;
   cursor: pointer;
   transform: scale(1.4);
   margin: auto 20px;
   font-size: 1.4rem;
   color: var(--textColor-1);
-  background: rgba(255, 255, 255, 0.85);
+  background: none;
   transition: all 0.3s ease;
   will-change: transform;
   outline: none;
