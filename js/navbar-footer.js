@@ -15,11 +15,17 @@ fetch("footer.html")
 // onpagereveal
 function login_or_out() {
   let currentUser = localStorage.getItem("currentUser") || "";
+  let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
   let loginButton = document.getElementById("login-btn");
   if (currentUser) {
     loginButton.innerHTML = `Logout`;
   } else {
     loginButton.innerHTML = `Login`;
   }
-  // localStorage.setItem("currentUser", currentUser);
+  localStorage.setItem("currentUser", currentUser);
+  localStorage.setItem("MyUsers", JSON.stringify(users));
+}
+
+function logout() {
+  localStorage.removeItem("currentUser");
 }
