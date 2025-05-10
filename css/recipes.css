@@ -115,6 +115,7 @@
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease-in-out;
+  will-change: transform;
 }
 
 .recipe-card:hover {
@@ -122,10 +123,6 @@
   cursor: pointer;
   border-radius: 15px;
   transform: scale(1.01);
-}
-
-.recipe-card a {
-  text-decoration: none;
 }
 
 .recipe-card img {
@@ -137,6 +134,7 @@
   will-change: transform;
   backface-visibility: hidden;
   position: relative;
+  will-change: auto;
 }
 
 .recipe-card h2 {
@@ -144,6 +142,12 @@
   color: #ae8201;
   will-change: transform;
   backface-visibility: hidden;
+  will-change: auto;
+}
+
+.recipe-card a {
+  text-decoration: none;
+  will-change: auto;
 }
 
 .recipe-card p {
@@ -151,6 +155,7 @@
   color: #525252;
   will-change: transform;
   backface-visibility: hidden;
+  will-change: auto;
 }
 
 /* Heart Button Styles */
