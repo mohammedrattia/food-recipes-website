@@ -85,13 +85,13 @@ body{
 h1{
     font-size: 4rem;
     font-weight: 900px;
-    transform: translateY(-80px);
+    transform: translateY(-50px);
     color: var(--text-color);
 }
 h5{
     font-size: 1.125rem;
     color: rgb(133, 133, 133);
-    transform: translateY(-90px);
+    transform: translateY(-60px);
 }
 form{
     width: min(400px,100%);

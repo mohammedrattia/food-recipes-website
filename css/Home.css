@@ -74,6 +74,12 @@
   --transition: 0.3s ease all;
   --max-width: 1120px;
   --fixed-width: 600px;
+
+  /* Font Weights */
+  --weight-1: 400;
+  --weight-2: 500;
+  --weight-3: 600;
+
   /* edit those for dark and light theme */
   /* fonts colors */
   --textColor-1: var(--heading-textColor);
@@ -84,11 +90,6 @@
   --backgroundColor-1: var(--white);
   --backgroundColor-2: var(--grey-50);
   --backgroundColor-3: var(--backgroundColor-secondary);
-
-  /* Font Weights */
-  --weight-1: 400;
-  --weight-2: 500;
-  --weight-3: 600;
 
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
