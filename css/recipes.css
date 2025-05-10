@@ -1,7 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* Space */
+  --step--5: clamp(0.3686rem, 0.6197rem + -0.324vi, 0.5549rem);
+  --step--4: clamp(0.4608rem, 0.6812rem + -0.2843vi, 0.6243rem);
+  --step--3: clamp(0.576rem, 0.7463rem + -0.2197vi, 0.7023rem);
+  --step--2: clamp(0.72rem, 0.8145rem + -0.122vi, 0.7901rem);
+  --step--1: clamp(0.8889rem, 0.885rem + 0.0193vi, 0.9rem);
+  --step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --step-1: clamp(1.125rem, 1.0272rem + 0.4891vi, 1.4063rem);
+  --step-2: clamp(1.2656rem, 1.0944rem + 0.856vi, 1.7578rem);
+  --step-3: clamp(1.4238rem, 1.1548rem + 1.3451vi, 2.1973rem);
+  --step-4: clamp(1.6018rem, 1.2036rem + 1.9909vi, 2.7466rem);
+  --step-5: clamp(1.802rem, 1.2347rem + 2.8369vi, 3.4332rem);
+  --step-6: clamp(2.0273rem, 1.2397rem + 3.9378vi, 4.2915rem);
+  --step-7: clamp(2.2807rem, 1.2081rem + 5.363vi, 5.3644rem);
+  --step-8: clamp(2.5658rem, 1.1259rem + 7.1995vi, 6.7055rem);
+
+  /* colors */
+  --primary-100: hsl(22, 100%, 94%);
+  --primary-200: hsl(22, 100%, 87%);
+  --primary-300: hsl(22, 100%, 81%);
+  --primary-400: hsl(22, 100%, 70%);
+  --primary-500: hsl(22, 100%, 58%);
+  --primary-600: hsl(23, 100%, 50%);
+  --primary-700: hsl(22, 70%, 37%);
+  --primary-800: hsl(22, 50%, 25%);
+  --primary-900: hsl(22, 48%, 14%);
+  /* another primary */
+  /* --primary-500: hsl(11, 99%, 61%); */
+
+  /* grey */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  /* rest of the colors */
+  --primary: var(--primary-600);
+  /* --secondary: #fffaeb; */
+  --secondary: rgba(255, 238, 229, 0.7);
+  --black: #222;
+  --white: #fff;
+  --orange-light: #f8eed7;
+  --orange-dark: #845e20;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  --dark: #103741;
+  /* Dark teal for text and important elements */
+  --dark-light: rgba(16, 55, 65, 0.7);
+  /* Semi-transparent dark */
+  --primary-text: #2a2a2a;
+  /* --secondary-text: hsl(60, 1%, 45%);  */
+  /* Gray for secondary text */
+  --secondary-text: hsla(0, 0%, 0%, 0.69);
+  /* Gray for secondary text */
+
+  /* fonts  */
+  --headingFont: "Cal Sans", sans-serif;
+  --bodyFont: "Rubik", sans-serif;
+  --smallText: 0.7em;
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --backgroundColor-secondary: var(--secondary);
+  --textColor: var(--primary-text);
+  --heading-textColor: var(--primary-600);
+  --btn: var(--primary-500);
+  --btn-hover: var(--primary-600);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+  /* Font Weights */
+  --weight-1: 400;
+  --weight-2: 500;
+  --weight-3: 600;
+
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  --shadow-5: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
 * {
   box-sizing: content-box;
 }
-
 .footerContainer,
 .footer,
 .navbar-container,
@@ -95,7 +189,10 @@
 .but button:hover {
   background-color: #d5d5d5;
 }
-
+.general .tag-session h2 {
+  color: var(--primary-600);
+  padding-bottom: 10px;
+}
 .vertical-line {
   border-left: 4px solid #ccc;
   margin: 0 48px;
@@ -141,7 +238,7 @@
 
 .recipe-card h2 {
   margin: 0;
-  color: #ae8201;
+  color: var(--primary-600);
   will-change: transform;
   backface-visibility: hidden;
 }
@@ -160,7 +257,7 @@
   cursor: pointer;
   /* padding: 8px; */
   font-size: 1.5rem;
-  color: #ae8201;
+  color: var(--primary-600);
   transition: all 0.3s ease;
   outline: none;
   will-change: transform;
@@ -180,7 +277,7 @@
 
 /* Hover effect */
 .fav-btn:hover {
-  color: #c4960d; /* Hover color */
+  color: var(--primary-600); /* Hover color */
   transform: scale(1.1); /* Slight grow effect */
 }
 
