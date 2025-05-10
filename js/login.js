@@ -8,7 +8,7 @@ function loginUser(event) {
   if (!validateInput()) return;
   let currentUser = localStorage.getItem("currentUser") || "";
 
-  currentUser = username;
+  currentUser = username.value;
   localStorage.setItem("currentUser", currentUser);
   window.location.replace("./index.html");
 };

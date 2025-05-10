@@ -47,6 +47,8 @@
   padding: 10px 0px;
   font-size: 18px;
   border: none;
+  background-color: var(--backgroundColor-7);
+  color: var(--textColor-5);
 }
 
 .search-container input:focus {
@@ -95,8 +97,8 @@
 .but button {
   /* background-color: var(--backgroundColor-1); */
   /* color: var(--textColor-1); */
-  background-color: rgba(217, 217, 217, 0.496);
-  color: rgb(96, 96, 96);
+  background-color: rgba(217, 217, 217, 0.319);
+  color: var(--textColor-6);
   border: none;
   /* border-style: solid;
   border-width: 1.5px;
@@ -139,7 +141,7 @@
   padding-bottom: 10px;
 }
 .vertical-line {
-  border-left: 4px solid var(--textColor-1);
+  border: 2px solid var(--textColor-1);
   margin: 0 48px;
 }
 
@@ -158,7 +160,7 @@
   position: relative;
   transition: all 0.3s ease-in-out;
   will-change: transform;
-  background-color: var(--backgroundColor-1);
+  background-color: var(--backgroundColor-6);
   border-radius: var(--step-1);
   box-shadow: var(--shadow-4);
   transition: var(--transition);

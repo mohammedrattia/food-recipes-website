@@ -116,3 +116,8 @@ const validateInput = () => {
   }
   return flag;
 };
+function applyTheme() {
+  const root = document.documentElement;
+  root.classList.add("darkmode");
+}
+applyTheme(); 

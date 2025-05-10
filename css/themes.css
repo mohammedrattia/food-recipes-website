@@ -93,6 +93,9 @@
   --backgroundColor-2: var(--grey-50);
   --backgroundColor-3: var(--secondary);
   --backgroundColor-4: var(--backgroundColor-secondary);
+  --backgroundColor-5: var(--backgroundColor-secondary);
+  --backgroundColor-6: var(--white);
+  --backgroundColor-7: none;
 
   /* edit those for dark and light theme */
   /* fonts colors */
@@ -100,6 +103,8 @@
   --textColor-2: var(--primary-textColor);
   --textColor-3: var(--secondary-textColor);
   --textColor-4: var(--white);
+  --textColor-5: var(--black);
+  --textColor-6: rgb(96, 96, 96);
   /* other colors */
   --backgroundColor-1: var(--white);
   --backgroundColor-2: var(--grey-50);
@@ -114,8 +119,75 @@
   --shadow-4: 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   --shadow-5: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
 
+  /* Background Img */
+  --background-img: linear-gradient(rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.158)), url(../Images/Login_Light.jpg);
+
+    /* Mada theme */
+  --M-accent-color: var(--primary-600);
+  --M-text-color: rgb(83, 83, 83);
+  --M-base-color: rgb(255, 255, 255);
+  --M-input-color: rgb(238, 238, 238);
+  --M-button-hover-color: rgb(83, 83, 83);
+  --M-text-button-color: rgb(255, 255, 255);
+
+}
+:root.darkmode{
+
+  /* Text colors */
+  --textColor: #f1f1f1;
+  --primary-textColor: #f1f1f1;
+  --secondary-textColor: rgba(255, 255, 255, 0.6);
+  --heading-textColor: var(--primary-500);
+
+  /* Specific text overrides */
+  --textColor-1: var(--heading-textColor);
+  --textColor-2: var(--primary-textColor);
+  --textColor-3: var(--secondary-textColor);
+  --textColor-4: var(--white);
+  --textColor-5: var(--white);
+  --textColor-6: rgb(214, 214, 214);
+
+  /* Backgrounds */
+  --backgroundColor-1: #1c1c1c;
+  --backgroundColor-2: #121212;
+  --backgroundColor-3: rgba(255, 255, 255, 0.05);
+  --backgroundColor-4: rgb(24, 24, 24);
+  --backgroundColor-5: rgb(24, 24, 24);
+  --backgroundColor-6: #252525;
+  --backgroundColor-7: #1c1c1c;
+
+  /* Inputs & buttons */
+  --text-button-color: #ffffff;
+  --button-hover-color: #333333;
+  --btn: var(--primary-500);
+  --btn-hover: var(--primary-400);
+
+  /* Shadows (lightened or softened for dark mode) */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-3: 0 10px 15px rgba(0, 0, 0, 0.3);
+  --shadow-4: 0 4px 8px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-5: 0 20px 25px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
+
+  /* Accent color */
+  /* --accent-color: var(--primary-600); */
+
+  /* Misc */
+  --borderRadius: 0.25rem;
+  --transition: 0.3s ease all;
+
+  /* Background Img */
+  --background-img: url(../Images/Login_Dark.jpg);
+
+  /* Mada theme */
+  --M-accent-color: var(--primary-600);
+  --M-text-color: var(--grey-200);
+  --M-base-color: rgb(40, 40, 40);
+  --M-input-color: rgb(83, 83, 83);
+  --M-text-button-color: rgb(255, 255, 255);
+  --M-button-hover-color: rgb(83, 83, 83);
+}
 * {
   box-sizing: border-box;
   margin: 0;

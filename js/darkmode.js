@@ -1,27 +1,34 @@
-let darkmode = localStorage.getItem('darkmode')
-const switchthemes = document.getElementById('switch-themes')
-
+let currentTheme = localStorage.getItem("currentTheme") || "lightmode";
+const switchthemes = document.getElementById("switch-themes");
+var root = document.documentElement;
 const enableDarkmode = () => {
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode' , 'active')
-}
+  root.classList.add("darkmode");
+  localStorage.setItem("currentTheme", "darkmode");
+  switchthemes.getElementsByTagName("svg")[0].style.display="block";
+  switchthemes.getElementsByTagName("svg")[1].style.display="none";
+  
+};
 
 const disableDarkmode = () => {
-  document.body.classList.remove('darkmode')
-  localStorage.setItem('darkmode' , null)
-}
+  root.classList.remove("darkmode");
+  localStorage.setItem("currentTheme", "lightmode");
+  switchthemes.getElementsByTagName("svg")[1].style.display="block";
+  switchthemes.getElementsByTagName("svg")[0].style.display="none";
+};
 
-if (darkmode === 'active') {
+if (currentTheme === "darkmode") {
   enableDarkmode();
 } else {
   disableDarkmode();
 }
 
-switchthemes.addEventListener('click', () => {
-  darkmode = localStorage.getItem('darkmode');
-  if (darkmode !== 'active') {
-      enableDarkmode();
+function switchTheme() {
+  currentTheme = localStorage.getItem("currentTheme");
+  if (currentTheme === "darkmode") {
+    console.log("I don't work")
+    disableDarkmode();
   } else {
-      disableDarkmode();
+    console.log("I work");
+    enableDarkmode();
   }
-});
+}
