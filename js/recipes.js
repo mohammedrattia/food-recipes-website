@@ -1,6 +1,6 @@
-// get the tag from the url
 let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
 let currentUser = localStorage.getItem("currentUser") || "";
+// get the tag from the url
 const params = new URLSearchParams(window.location.search);
 const recipeTag = params.get("tag");
 

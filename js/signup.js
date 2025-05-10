@@ -1,23 +1,3 @@
-// function addUser() {
-//   if (!validateInput()) {
-//     return;
-//   };
-//   let username = document.getElementById("username").value;
-//   let email = document.getElementById("email").value;
-//   let password = document.getElementById("password").value;
-//   let confirmPassword = document.getElementById("confirm-password").value;
-//   let user = {
-//     email: email,
-//     username: username,
-//     password: password,
-//     favorites: [],
-//   };
-
-//   users[username] = user;
-//   localStorage.setItem("MyUsers", JSON.stringify(users));
-//   window.location = './login.html';
-// };
-
 var users = JSON.parse(localStorage.getItem("MyUsers")) || {};
 
 const form = document.getElementById("form");

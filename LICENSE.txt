@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Abdulla Ramadan, Ahmed Khairi, Ahmed Abdelhady, Ahmed Mohammed, Anas Moharram, Hamza Taha, Mohammed R. Attia, Malek Abido, Omar Sedik
+Copyright (c) 2025 Abdallah Ramadan, Ahmed Abdelhady, Ahmed Khairi, Ahmed Mohammed, Anas Moharram, Hamza Taha, Malek Abido, Mohammed R. Attia, Omar Sedik
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
