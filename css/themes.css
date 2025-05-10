@@ -81,6 +81,17 @@
   --weight-1: 400;
   --weight-2: 500;
   --weight-3: 600;
+  
+  /* edit those for dark and light theme */
+  /* fonts colors */
+  --textColor-1: var(--heading-textColor);
+  --textColor-2: var(--primary-textColor);
+  --textColor-3: var(--secondary-textColor);
+  --textColor-4: var(--white);
+  /* other colors */
+  --backgroundColor-1: var(--white);
+  --backgroundColor-2: var(--grey-50);
+  --backgroundColor-3: var(--backgroundColor-secondary);
 
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
