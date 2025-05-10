@@ -22,7 +22,8 @@ function login_or_out() {
   } else {
     loginButton.innerHTML = `Login`;
   }
-  // localStorage.setItem("currentUser", currentUser);
+  localStorage.setItem("currentUser", currentUser);
+  localStorage.setItem("MyUsers", JSON.stringify(users));
 }
 
 function logout() {
