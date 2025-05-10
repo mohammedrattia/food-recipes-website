@@ -191,7 +191,7 @@
 
 .recipe-card h2 {
   margin: 0;
-  color: var(--textColor-2);
+  color: var(--textColor-1);
   will-change: transform;
   backface-visibility: hidden;
   will-change: auto;

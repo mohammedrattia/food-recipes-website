@@ -7,15 +7,15 @@
   },
   {
     "id": 2,
-    "title": "Mansaf",
-    "image": "images/image3.jpg",
-    "description": "Traditional Jordanian lamb dish with yogurt and rice."
-  },
-  {
-    "id": 3,
     "title": "Bashamel",
     "image": "images/image2.jpg",
     "description": "Pasta layered with meat and creamy béchamel sauce."
+  },
+  {
+    "id": 3,
+    "title": "Mansaf",
+    "image": "images/image3.jpg",
+    "description": "Traditional Jordanian lamb dish with yogurt and rice."
   },
   {
     "id": 4,
