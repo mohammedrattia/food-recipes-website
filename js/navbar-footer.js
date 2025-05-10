@@ -15,6 +15,7 @@ fetch("footer.html")
 // onpagereveal
 function login_or_out() {
   let currentUser = localStorage.getItem("currentUser") || "";
+  let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
   let loginButton = document.getElementById("login-btn");
   if (currentUser) {
     loginButton.innerHTML = `Logout`;
@@ -24,11 +25,6 @@ function login_or_out() {
   // localStorage.setItem("currentUser", currentUser);
 }
 
-function jawn() {
+function logout() {
   localStorage.removeItem("currentUser");
-  // loginBtn.textContent = (loginBtn.textContent === "Login") ? "Logout" : "Login";
-  // if(loginBtn.textContent === "Logout"){
-  // }
-  console.log("Malek a7san mn Mada -Ragab")
-};
-// const loginBtn = document.getElementById("login-btn");
+}
