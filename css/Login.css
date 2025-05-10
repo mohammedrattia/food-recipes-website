@@ -87,6 +87,7 @@ h5 {
   font-size: 1.4rem;
   color: var(--M-text-color);
   transform: translateY(-25px);
+  margin-top: 3px;
 }
 
 form {
