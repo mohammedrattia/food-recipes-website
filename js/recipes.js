@@ -1,6 +1,6 @@
-// get the tag from the url
 let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
 let currentUser = localStorage.getItem("currentUser") || "";
+// get the tag from the url
 const params = new URLSearchParams(window.location.search);
 const recipeTag = params.get("tag");
 
@@ -30,7 +30,7 @@ fetch(`${path}data/recipes.json`)
           var isActive = "";
         }
         recipesText += `
-        <div class="recipe-card" onclick="recipe_request(this.id)" id="${recipe}">
+        <div class="recipe-card" onclick="recipe_request(this.id, event)" id="${recipe}">
         <img src="images/image${recipe}.jpg" alt="${data[recipe].name}" >
                   <button onclick="fav_button(this.id)" class="fav-btn ${isActive}" id="fav_${recipe}"><i class="${isFav} fa-heart"></i></button>
                   <div >
@@ -78,7 +78,10 @@ fetch(`${path}data/recipes.json`)
   });
 
 // open the recipe
-function recipe_request(id) {
+function recipe_request(id, event) {
+  if (event.target.closest('.fav-btn') || event.target.classList.contains('fa-heart')) {
+    return; // Exit if we click the heart
+  }
   window.location = `./recipe.html?id=${id}`;
 }
 
