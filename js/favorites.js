@@ -17,6 +17,7 @@ fetch(`${path}data/recipes.json`)
         (data[recipe].tags.includes(recipeTag) ||
           recipeTag == null ||
           recipeTag == "all") &&
+        users.hasOwnProperty(currentUser) &&
         users[currentUser].favorites.includes(recipe)
       ) {
         var isFav = "fa-solid";
@@ -44,7 +45,7 @@ fetch(`${path}data/recipes.json`)
     document.getElementsByClassName("recipes")[0].innerHTML = recipesText;
 
     let tagList = new Set();
-    let tags = `<button id="all" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> all</button>`;
+    let tags = `<button id="all" onclick="tag_filter(this.id)" style="${!recipeTag || recipeTag === 'all' ? 'background-color: var(--textColor-1); color: var(--backgroundColor-1);' : ''}"><i class="fa-solid fa-plus"></i> all</button>`;
     for (const recipe in data) {
       for (const tag of data[recipe].tags) {
         tagList.add(tag);
@@ -55,11 +56,11 @@ fetch(`${path}data/recipes.json`)
       if (tag == recipeTag) {
         console.log(tag);
         tags += `
-                <button id="all" onclick="tag_filter(this.id)" style="background-color: #b0b0b0;">
-                    <img src="images/plus-solid.svg"> ${tag}
+                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--backgroundColor-1);">
+                    <i class="fa-solid fa-plus"></i> ${tag}
                 </button>`;
       } else
-        tags += `<button id="${tag}" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> ${tag}</button>`;
+        tags += `<button id="${tag}" onclick="tag_filter(this.id)"><i class="fa-solid fa-plus"></i> ${tag}</button>`;
     }
 
     document.getElementsByClassName("but")[0].innerHTML = tags;
@@ -111,3 +112,16 @@ function fav_button(id) {
   }
   localStorage.setItem("MyUsers", JSON.stringify(users));
 }
+// footer and navbar
+fetch('navbar.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('navbar-placeholder').innerHTML = data;
+});
+
+// Load Footer
+fetch('footer.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('footer-placeholder').innerHTML = data;
+});

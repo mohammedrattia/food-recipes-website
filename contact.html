@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us</title>
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/navbar-footer.css" />
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-    
+<body class="darkmode">
+  
+  <div id="navbar-placeholder"></div>
+   <div class="container">
+      <div class="contact-lift">
+         <h1>Contact Us</h1>
+         <pre><h3>Feel free to reach out whenever you’re 
+facing any issues or whatever!
+
+<i class="fas fa-phone-volume"></i> <span>+201000006969</span>
+
+<i class="fas fa-envelope"></i> <span>info@lethimcook.org</span>
+</h3>
+         </pre>
+        </div>
+      <div class="contact-us">
+        <form onsubmit="event.preventDefault(); openpopup();" class="contact">
+          <label for="email" class="name">Email</label>
+          <input type="email" name="email" class="contact-inputs" required><br><br>
+          <label for="message" class="name">Message</label>
+          <textarea name="message"class="contact-inputs" required></textarea><br><br>
+          <button type="submit" class="btn">Send</button>
+      <div class="popup" id="popup">
+            <img src="404-tick.png">
+            <h2>Thank you.</h2>
+            <p>Your message was sent.</p>
+          <button type="button" class="ok" onclick="closepopup()">Ok</button>
+      </div>    
+      
+       </form>
+   </div>   
+   </div>
+   <div id="footer-placeholder"></div>
+   <script type="text/javascript" src="js/navbar-footer.js"></script>
+   <script type="text/javascript" src="js/contact.js"></script>  
 </body>
 </html>
