@@ -25,14 +25,14 @@ facing any issues or whatever!
          </pre>
         </div>
       <div class="contact-us">
-        <form onsubmit="event.preventDefault(); openpopup();" class="contact">
+        <form onsubmit=" openpopup(event);" class="contact">
           <label for="email" class="name">Email</label>
           <input type="email" name="email" class="contact-inputs" required><br><br>
           <label for="message" class="name">Message</label>
           <textarea name="message"class="contact-inputs" required></textarea><br><br>
           <button type="submit" class="btn">Send</button>
       <div class="popup" id="popup">
-            <img src="404-tick.png">
+            <img src="images/404-tick.png">
             <h2>Thank you.</h2>
             <p>Your message was sent.</p>
           <button type="button" class="ok" onclick="closepopup()">Ok</button>

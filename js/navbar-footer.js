@@ -29,3 +29,18 @@ function login_or_out() {
 function logout() {
   localStorage.removeItem("currentUser");
 }
+
+function goFavorites() {
+  let currentUser = localStorage.getItem("currentUser");
+  let users = JSON.parse(localStorage.getItem("MyUsers"));
+
+  if (users.hasOwnProperty(currentUser) && currentUser) {
+    window.location = `./favorites.html`;
+  } else {
+    goLogin();
+  }
+}
+
+function goLogin() {
+  window.location = `./login.html`;
+}

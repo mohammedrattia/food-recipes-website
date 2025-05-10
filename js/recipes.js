@@ -58,7 +58,11 @@ fetch(`${path}data/recipes.json`)
     }
     tagList = Array.from(tagList).sort();
 
-    let tags = `<button id="all" onclick="tag_filter(this.id)" style="${!recipeTag || recipeTag === 'all' ? 'background-color: var(--textColor-1); color: var(--backgroundColor-1);' : ''}"><i class="fa-solid fa-plus"></i> all</button>`;
+    let tags = `<button id="all" onclick="tag_filter(this.id)" style="${
+      !recipeTag || recipeTag === "all"
+        ? "background-color: var(--textColor-1); color: var(--backgroundColor-1);"
+        : ""
+    }"><i class="fa-solid fa-plus"></i> all</button>`;
     for (const tag of tagList) {
       if (tag == recipeTag) {
         tags += `
@@ -102,6 +106,7 @@ function search() {
 
 function fav_button(id) {
   let btn = document.getElementById(id);
+  if (!makeFavorite()) return;
   const isActive = btn.classList.toggle("active");
   const icon = btn.querySelector("i");
   // Toggle heart icon
@@ -118,4 +123,16 @@ function fav_button(id) {
     users[currentUser].favorites.splice(recipe_index, 1);
   }
   localStorage.setItem("MyUsers", JSON.stringify(users));
+}
+
+function makeFavorite() {
+  let currentUser = localStorage.getItem("currentUser");
+  let users = JSON.parse(localStorage.getItem("MyUsers"));
+
+  if (users.hasOwnProperty(currentUser) && currentUser) {
+    return true;
+  } else {
+    window.location = `./login.html`;
+    return false;
+  }
 }

@@ -1,6 +1,7 @@
 let popup = document.getElementById("popup");
 
-function openpopup() {
+function openpopup(event) {
+    event.preventDefault();
     popup.classList.add("open-popup");
 }
 

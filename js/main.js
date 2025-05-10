@@ -9,6 +9,8 @@ fetch(`${path}data/recommendations.json`)
     const recipe = data[i];
     const card = document.createElement("div");
     card.className = "gallery-item";
+    card.setAttribute("onclick", `goRecipe(${recipe.id})`);
+
     card.innerHTML = `
       <img src="${recipe.image}" alt="${recipe.title}">
       <div class="gallery-item-content">
@@ -19,3 +21,6 @@ fetch(`${path}data/recommendations.json`)
     container.appendChild(card);
   }
 });
+function goRecipe(recipeID) {
+  window.location = `recipe.html?id=${recipeID}`;
+}
