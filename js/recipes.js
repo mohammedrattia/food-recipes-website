@@ -19,7 +19,8 @@ fetch(`${path}data/recipes.json`)
         recipeTag == null ||
         recipeTag == "all"
       ) {
-        if (users[currentUser].favorites.includes(recipe)) {
+
+        if (users.hasOwnProperty(currentUser) && users[currentUser].favorites.includes(recipe)) {
           var isFav = "fa-solid";
           var isActive = "active";
         } else {
@@ -27,8 +28,8 @@ fetch(`${path}data/recipes.json`)
           var isActive = "";
         }
         recipesText += `
-                <div class="recipe-card">
-                  <img src="images/image${recipe}.jpg" alt="${
+        <div class="recipe-card">
+        <img src="images/image${recipe}.jpg" alt="${
           data[recipe].name
         }">
                   <button onclick="fav_button(this.id)" class="fav-btn ${isActive}" id="fav_${recipe}"><i class="${isFav} fa-heart"></i></button>
@@ -118,16 +119,3 @@ function fav_button(id) {
   }
   localStorage.setItem("MyUsers", JSON.stringify(users));
 }
-// add footer and navbar
-fetch('navbar.html')
-.then(res => res.text())
-.then(data => {
-  document.getElementById('navbar-placeholder').innerHTML = data;
-});
-
-// Load Footer
-fetch('footer.html')
-.then(res => res.text())
-.then(data => {
-  document.getElementById('footer-placeholder').innerHTML = data;
-});
