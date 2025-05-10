@@ -10,21 +10,11 @@ fetch(`${path}data/recommendations.json`)
       card.className = "gallery-item";
       card.innerHTML = `
         <img src="${recipe.image}" alt="${recipe.title}">
-        <h3><a href="recipes.html">${recipe.title}</a></h3>
-        <p>${recipe.description}</p>
+        <div class="gallery-item-content">
+          <h3><a href="recipes.html">${recipe.title}</a></h3>
+          <p>${recipe.description}</p>
+        </div>
       `;
       container.appendChild(card);
     });
-  });
-  fetch('navbar.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('navbar-placeholder').innerHTML = data;
-  });
-
-// Load Footer
-fetch('footer.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
   });

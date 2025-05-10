@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Let Him Cook</title>
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/navbar-footer.css" />
     <link rel="stylesheet" href="css/favorites.css" />
     <link
       rel="stylesheet"
@@ -21,34 +23,34 @@
 
   <body>
     <!-- Top Navigation -->
-    <div class="navbar-placeholder"></div>
+    <div id="navbar-placeholder"></div>
     <!-- Search Bar -->
-    <div class="search-container">
-      <div>
-        <img src="images/magnifying-glass-solid.svg" />
-        <input
-          id="filter"
-          type="text"
-          placeholder="Search"
-          onkeyup="search()"
-        />
+    <div class="content">
+      <div class="search-container">
+        <div>
+          <img src="images/magnifying-glass-solid.svg" />
+          <input
+            id="filter"
+            type="text"
+            placeholder="Search"
+            onkeyup="search()"
+          />
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="general">
+        <!-- Tags Section -->
+        <div class="tag-session">
+          <h2>Tags</h2>
+          <div class="but"></div>
+        </div>
+        <hr class="vertical-line" />
+        <!-- Recipes -->
+        <div class="recipes"></div>
       </div>
     </div>
-
-    <!-- Main Content -->
-    <div class="general">
-      <!-- Tags Section -->
-      <div class="tag-session">
-        <h2>Tags</h2>
-        <div class="but"></div>
-      </div>
-
-      <hr class="vertical-line" />
-
-      <!-- Recipes -->
-      <div class="recipes"></div>
-    </div>
-    <div class="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
+    <script type="text/javascript" src="js/navbar-footer.js"></script>
     <script type="text/javascript" src="js/favorites.js"></script>
   </body>
 </html>

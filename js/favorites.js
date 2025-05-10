@@ -17,6 +17,7 @@ fetch(`${path}data/recipes.json`)
         (data[recipe].tags.includes(recipeTag) ||
           recipeTag == null ||
           recipeTag == "all") &&
+        users.hasOwnProperty(currentUser) &&
         users[currentUser].favorites.includes(recipe)
       ) {
         var isFav = "fa-solid";
