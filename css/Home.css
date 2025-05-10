@@ -3,7 +3,9 @@
     padding-right: var(--step-6);
     background-color: var(--backgroundColor-3);
     } */
-
+body {
+  margin-top: 76px;
+}
 .header {
   margin-left: 10px;
 }
