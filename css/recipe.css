@@ -4,47 +4,37 @@
 } */
 
 /* General */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-h1,
-h2,
-h3,
-h4,
-li,
-ul,
-a,
-p {
+.content > :where(h1, h2, h3, h4, li, ul, a, p) {
   margin-left: 10px;
   margin-right: 10px;
 }
-a,
+/* a,
 p {
   font-size: 125%;
+} */
+.content h1 {
+  color: var(--textColor-1);
+  font-size: 1.5rem;
 }
-h1 {
-  color: #ae8201;
-  font-family: Montserrat, sans-serif;
-  font-size: 1.7rem;
+.content h2 {
+  color: var(--textColor-2);
+  font-size: 1.5rem;
 }
-p,
-li {
+.content p,
+.content li {
   color: black;
-  font-family: Montserrat;
   font-size: 1.2rem;
 }
-hr {
-  margin: 2px 33% 15px 10px;
+.content hr {
+  margin: 2px 33% 15px 0px;
   color: #d4d4d4;
+  /* color: var(--textColor-1); */
 }
-li {
+.content li {
   margin: 10px 10px 10px 20px;
 }
-footer {
-  text-align: center;
-  padding: 3px;
+.content {
+  margin: 20px auto;
 }
 .hcenter {
   margin: auto;
@@ -58,37 +48,6 @@ footer {
   object-fit: cover;
   border-radius: 10px;
 }
-.navbar {
-  display: flex;
-  align-items: center;
-  background: rgb(255, 255, 255);
-  padding: 0 20px;
-  justify-content: space-between;
-  border-bottom: 2px solid #0000004e;
-}
-.navbar {
-  color: #ae8201;
-  cursor: pointer;
-}
-.navlist {
-  display: flex;
-  list-style-type: none;
-  gap: 20px;
-}
-.navbox {
-  font-size: 20px;
-  margin: 16px 8px;
-  /* padding 16px 14px; */
-}
-.navbox a {
-  color: #c69504c9;
-  text-decoration: none;
-}
-.navbox a:hover {
-  color: #c69504;
-  text-decoration: none;
-}
-
 /* Links */
 a {
   background-color: transparent;
@@ -163,20 +122,31 @@ button:active {
 } */
 /* Heart Button Styles */
 .fav-btn {
-  background: transparent !important;
+  background: transparent;
   border: none;
   cursor: pointer;
   transform: scale(1.4);
   margin: auto 20px;
-  font-size: 1.5rem;
-  color: #ae8201;
+  font-size: 1.4rem;
+  color: var(--textColor-1);
+  background: rgba(255, 255, 255, 0.85);
   transition: all 0.3s ease;
+  will-change: transform;
   outline: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Circular button */
+  width: 35px; /* Fixed size */
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hover effect */
 .fav-btn:hover {
-  color: #c4960d;
+  color: var(--backgroundColor-1); /* Hover color */
+  background-color: var(--textColor-1); /* Hover color */
   transform: scale(1.6); /* Slight grow effect */
 }
 

@@ -1,60 +1,17 @@
-body {
-  background-color: white;
-  margin: 0;
-  font-family: Montserrat, sans-serif;
+* {
+  box-sizing: content-box;
 }
 
-.header {
-  margin-left: 10px;
-}
+.footerContainer,
+.footer,
+.navbar-container,
 .navbar {
-  display: flex;
-  align-items: center;
-  background: rgb(255, 255, 255);
-  padding: 0 20px;
-  justify-content: space-between;
-  border-bottom: 1px solid #0000004e;
+  box-sizing: border-box;
 }
-.navbar h1 {
-  color: #ae8201;
-  margin: 20px 0px;
-  cursor: pointer;
-  text-align: center;
-}
-.navbar ul li a {
-  padding: 0.3em 0.8em;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-h1 {
-  color: #ae8201;
-}
-ul {
-  display: flex;
-  list-style-type: none;
-  gap: 20px;
-}
-li {
-  font-size: 18px;
-  margin: 16px 8px;
-  transition: all 0.3 ease;
-  /* padding 16px 14px; */
-}
-li a {
-  color: #c69504c9;
-  text-decoration: none;
-}
-li a:hover {
-  color: #c69504;
-  background: #d9a3029f;
-  margin: 10px 10px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-.rec-btn {
+
+/* .rec-btn {
   margin-left: 20px;
-  color: #ae8201;
+  color: #251c02;
   text-decoration: none;
   font-weight: bold;
   background: none;
@@ -70,7 +27,7 @@ li a:hover {
   height: 18px;
   border-radius: 5px;
   padding: 12px 17px;
-}
+} */
 .search-container {
   width: 1000px;
   margin: 50px auto;
@@ -78,8 +35,11 @@ li a:hover {
 
 .search-container div {
   margin: 12px;
-  border: 2px solid #c7c7c7;
-  border-radius: 6px;
+  border: 3px solid var(--textColor-1);
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+  padding: 3px;
 }
 
 .search-container input {
@@ -93,14 +53,24 @@ li a:hover {
 .search-container input:focus {
   outline: none;
 }
-
-.search-container img {
-  width: 30px;
-  padding: 0px 10px;
-  opacity: 50%;
-  float: left;
-  position: relative;
-  transform: translateY(25%);
+.search-container label {
+  /* padding: 0px 10px; */
+  /* opacity: 50%; */
+  /* float: left; */
+  /* position: relative; */
+  /* color: var(--textColor-4); */
+  /* background-color: var(--textColor-1); */
+  margin: auto 8px;
+  color: var(--textColor-1);
+  cursor: pointer;
+  z-index: 10;
+  width: 30px; /* Fixed size */
+  height: 30px;
+  border-radius: 50%; /* Circular button */
+  transform: scale(1.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .general {
@@ -109,7 +79,12 @@ li a:hover {
 }
 
 .tag-session {
-  width: 99px;
+  width: 120px;
+}
+.tag-session h2 {
+  color: var(--textColor-1);
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .but {
@@ -119,28 +94,50 @@ li a:hover {
 }
 
 .but button {
-  background-color: #e0e0e0;
+  /* background-color: var(--backgroundColor-1);
+  color: var(--textColor-1); */
+  background-color: rgba(217, 217, 217, 0.496);
+  color: rgb(96, 96, 96);
   border: none;
-  padding: 5px 10px;
-  font-weight: bold;
+  /* border-style: solid;
+  border-width: 3px;
+  border-color: var(--textColor-1); */
+  border-radius: 40px;
+  padding: 7px 10px;
+  /* font-weight: bold; */
   text-align: left;
   display: flex;
   align-items: center;
   gap: 6px;
-  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: var(--transition);
+  will-change: transform;
 }
 
-.but button img {
-  width: 15px;
-  height: 15px;
+.but button > * {
+  will-change: auto;
 }
-
+.but button i {
+  /* width: 30px; */
+  /* height: 30px; */
+  border-radius: 50%; /* Circular button */
+  transform: scale(1.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 15px; */
+  /* height: 15px; */
+  /* font-size: 5px; */
+}
 .but button:hover {
-  background-color: #d5d5d5;
+  /* background-color: var(--backgroundColor-2); */
+  transform: scale(1.1);
 }
 
 .vertical-line {
-  border-left: 4px solid #ccc;
+  border-left: 4px solid var(--textColor-1);
   margin: 0 48px;
 }
 
@@ -157,11 +154,23 @@ li a:hover {
   padding: 10px;
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease-in-out;
+  will-change: transform;
+  background-color: var(--backgroundColor-1);
+  border-radius: var(--step-1);
+  box-shadow: var(--shadow-4);
+  transition: var(--transition);
+  will-change: transform;
 }
 
 .recipe-card:hover {
-  background-color: #f8f8f8;
+  background-color: var(--backgroundColor-2);
   cursor: pointer;
+  border-radius: 15px;
+  transform: scale(1.01);
+}
+.recipe-card > * {
+  will-change: auto;
 }
 
 .recipe-card a {
@@ -174,33 +183,54 @@ li a:hover {
   object-fit: cover;
   aspect-ratio: 1/1;
   border-radius: 10px;
+  backface-visibility: hidden;
+  position: relative;
 }
 
 .recipe-card h2 {
   margin: 0;
-  color: #ae8201;
+  color: var(--textColor-1);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .recipe-card p {
   margin: 8px 0 0;
-  color: #525252;
+  color: var(--textColor-3);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Heart Button Styles */
 .fav-btn {
   background: transparent;
   border: none;
-  cursor: pointer;
   /* padding: 8px; */
-  font-size: 1.5rem;
-  color: #ae8201;
+  font-size: 1.2rem;
+  color: var(--textColor-1);
+  /* background: var(--backgroundColor-1); */
+  background: rgba(255, 255, 255, 0.85);
   transition: all 0.3s ease;
   outline: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0.9rem;
+  top: 0.9rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Circular button */
+  width: 32px; /* Fixed size */
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hover effect */
 .fav-btn:hover {
-  color: #c4960d; /* Hover color */
+  color: var(--backgroundColor-1); /* Hover color */
+  background-color: var(--textColor-1); /* Hover color */
   transform: scale(1.1); /* Slight grow effect */
 }
 
@@ -230,5 +260,5 @@ li a:hover {
 
 .fav-btn.active i {
   animation: heartBeat 0.5s ease;
-  font-weight: 900;
+  font-weight: 800;
 }

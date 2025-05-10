@@ -1,3 +1,5 @@
+let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
+let currentUser = localStorage.getItem("currentUser") || "";
 const params = new URLSearchParams(window.location.search);
 const recipeTag = params.get("tag");
 // const recipeFavorite = "favorite";
@@ -15,25 +17,25 @@ fetch(`${path}data/recipes.json`)
         (data[recipe].tags.includes(recipeTag) ||
           recipeTag == null ||
           recipeTag == "all") &&
-        data[recipe].tags.includes("favorite")
+        users.hasOwnProperty(currentUser) &&
+        users[currentUser].favorites.includes(recipe)
       ) {
-        recipesText += `<div class="recipe-card" onclick="recipe_request(this.id)" id="${recipe}">
-                    <img src="images/image${recipe}.jpg" alt="${
+        var isFav = "fa-solid";
+        var isActive = "active";
+        recipesText += `
+                <div class="recipe-card">
+                  <img src="images/image${recipe}.jpg" alt="${
           data[recipe].name
         }">
-                    <div >
-                    <!-- <a href="#" onclick="recipe_request(this.id)" id="${recipe}"> -->
+                  <button onclick="fav_button(this.id)" class="fav-btn ${isActive}" id="fav_${recipe}"><i class="${isFav} fa-heart"></i></button>
+                  <div onclick="recipe_request(this.id)" id="${recipe}">
                     <h2>
                     ${data[recipe].name}
-                    <!--<i class="fa-solid fa-heart"></i>-->
-                    <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
-                    
                     </h2>
                         <p>${data[recipe].description.slice(
                           0,
                           300
                         )}... <u>Learn more &rarr;</u></p>
-                    <!-- </a> -->
                     </div>
                 </div>
                 `;
@@ -42,37 +44,11 @@ fetch(`${path}data/recipes.json`)
 
     document.getElementsByClassName("recipes")[0].innerHTML = recipesText;
 
-    document.querySelectorAll(".fav-btn").forEach((button) => {
-      button.addEventListener("click", function (e) {
-        e.stopPropagation(); // Prevent triggering the card click
-        const recipeId = this.getAttribute("data-recipe");
-        const isActive = this.classList.toggle("active");
-        const icon = this.querySelector("i");
-
-        // Toggle heart icon
-        if (isActive) {
-          icon.classList.remove("fa-regular");
-          icon.classList.add("fa-solid");
-          localStorage.setItem(`fav_${recipeId}`, "true");
-        } else {
-          icon.classList.remove("fa-solid");
-          icon.classList.add("fa-regular");
-          localStorage.setItem(`fav_${recipeId}`, "false");
-        }
-
-        // Add animation
-        this.classList.add("animate");
-        setTimeout(() => this.classList.remove("animate"), 500);
-      });
-    });
-
     let tagList = new Set();
-    let tags = `<button id="all" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> all</button>`;
+    let tags = `<button id="all" onclick="tag_filter(this.id)" style="${!recipeTag || recipeTag === 'all' ? 'background-color: var(--textColor-1); color: var(--backgroundColor-1);' : ''}"><i class="fa-solid fa-plus"></i> all</button>`;
     for (const recipe in data) {
       for (const tag of data[recipe].tags) {
-        if (!/favorite/i.test(tag)) {
-          tagList.add(tag);
-        }
+        tagList.add(tag);
       }
     }
     tagList = Array.from(tagList).sort();
@@ -80,11 +56,11 @@ fetch(`${path}data/recipes.json`)
       if (tag == recipeTag) {
         console.log(tag);
         tags += `
-                <button id="all" onclick="tag_filter(this.id)" style="background-color: #b0b0b0;">
-                    <img src="images/plus-solid.svg"> ${tag}
+                <button id="all" onclick="tag_filter(this.id)" style="background-color: var(--textColor-1); color: var(--backgroundColor-1);">
+                    <i class="fa-solid fa-plus"></i> ${tag}
                 </button>`;
       } else
-        tags += `<button id="${tag}" onclick="tag_filter(this.id)"><img src="images/plus-solid.svg"> ${tag}</button>`;
+        tags += `<button id="${tag}" onclick="tag_filter(this.id)"><i class="fa-solid fa-plus"></i> ${tag}</button>`;
     }
 
     document.getElementsByClassName("but")[0].innerHTML = tags;
@@ -117,3 +93,35 @@ function search() {
     }
   }
 }
+function fav_button(id) {
+  let btn = document.getElementById(id);
+  const isActive = btn.classList.toggle("active");
+  const icon = btn.querySelector("i");
+  // Toggle heart icon
+  if (isActive) {
+    icon.classList.remove("fa-regular");
+    icon.classList.add("fa-solid");
+    users[currentUser].favorites.push(id.slice(4, id.length));
+  } else {
+    let recipe_index = users[currentUser].favorites.indexOf(
+      id.slice(4, id.length)
+    );
+    icon.classList.remove("fa-solid");
+    icon.classList.add("fa-regular");
+    users[currentUser].favorites.splice(recipe_index, 1);
+  }
+  localStorage.setItem("MyUsers", JSON.stringify(users));
+}
+// footer and navbar
+fetch('navbar.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('navbar-placeholder').innerHTML = data;
+});
+
+// Load Footer
+fetch('footer.html')
+.then(res => res.text())
+.then(data => {
+  document.getElementById('footer-placeholder').innerHTML = data;
+});
