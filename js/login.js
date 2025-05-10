@@ -2,16 +2,16 @@ const form = document.getElementById("form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 var users = JSON.parse(localStorage.getItem("MyUsers")) || {};
+var currentUser = localStorage.getItem("currentUser") || "";
 
 function loginUser(event) {
   event.preventDefault();
   if (!validateInput()) return;
-  let currentUser = localStorage.getItem("currentUser") || "";
 
   currentUser = username.value;
   localStorage.setItem("currentUser", currentUser);
   window.location.replace("./index.html");
-};
+}
 
 const setError = (element, message) => {
   const inputControl = element.closest(".input-control");
