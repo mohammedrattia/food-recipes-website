@@ -55,10 +55,10 @@
   /* Dark teal for text and important elements */
   --dark-light: rgba(16, 55, 65, 0.7);
   /* Semi-transparent dark */
-  --primary-text: #2a2a2a;
+  --primary-textColor: #2a2a2a;
   /* --secondary-text: hsl(60, 1%, 45%);  */
   /* Gray for secondary text */
-  --secondary-text: hsla(0, 0%, 0%, 0.69);
+  --secondary-textColor: hsla(0, 0%, 0%, 0.69);
   /* Gray for secondary text */
 
   /* fonts  */
@@ -68,7 +68,7 @@
   /* rest of the vars */
   --backgroundColor: var(--grey-50);
   --backgroundColor-secondary: var(--secondary);
-  --textColor: var(--primary-text);
+  --textColor: var(--primary-textColor);
   --heading-textColor: var(--primary-600);
   --btn: var(--primary-500);
   --btn-hover: var(--primary-600);
