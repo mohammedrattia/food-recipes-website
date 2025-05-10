@@ -1,8 +1,8 @@
+var users = JSON.parse(localStorage.getItem("MyUsers")) || {};
 function addUser() {
   if (!validateInput()) {
     return;
   };
-  let users = JSON.parse(localStorage.getItem("MyUsers")) || {};
   let username = document.getElementById("username").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
@@ -14,18 +14,9 @@ function addUser() {
     favorites: [],
   };
 
-  if (users[username] == null) {
-    users[username] = user;
-  } else {
-    existed_user();
-  }
+  users[username] = user;
   localStorage.setItem("MyUsers", JSON.stringify(users));
   window.location = './login.html';
-};
-
-// edit the function to show alert message if the username already exists
-function existed_user() {
-  alert("There is already a user with this username");
 };
 
 const form = document.getElementById('form')
@@ -70,6 +61,9 @@ const validateInput = () => {
 
   if (usernameValue === '' || usernameValue == null) {
     setError(username, 'Username is required');
+    flag = false;
+  } else if (users[usernameValue] != null){
+    setError(username, 'User already exists with this username');
     flag = false;
   } else {
     setSuccess(username);
