@@ -35,6 +35,7 @@ p {
 }
 .content {
   margin: 20px auto;
+  min-height: 386px;
 }
 .hcenter {
   margin: auto;

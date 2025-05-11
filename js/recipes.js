@@ -30,10 +30,10 @@ fetch(`${path}data/recipes.json`)
           var isActive = "";
         }
         recipesText += `
-        <div class="recipe-card">
-        <img src="images/image${recipe}.jpg" alt="${data[recipe].name}">
+        <div class="recipe-card" onclick="recipe_request(this.id, event)" id="${recipe}">
+        <img src="images/image${recipe}.jpg" alt="${data[recipe].name}" >
                   <button onclick="fav_button(this.id)" class="fav-btn ${isActive}" id="fav_${recipe}"><i class="${isFav} fa-heart"></i></button>
-                  <div onclick="recipe_request(this.id)" id="${recipe}">
+                  <div >
                     <h2>
                     ${data[recipe].name}
                     </h2>
@@ -78,7 +78,10 @@ fetch(`${path}data/recipes.json`)
   });
 
 // open the recipe
-function recipe_request(id) {
+function recipe_request(id, event) {
+  if (event.target.closest('.fav-btn') || event.target.classList.contains('fa-heart')) {
+    return; // Exit if we click the heart
+  }
   window.location = `./recipe.html?id=${id}`;
 }
 

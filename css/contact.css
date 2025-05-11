@@ -7,15 +7,15 @@
     --button-hover-color: rgb(83, 83, 83);
     --text-button-color: rgb(255, 255, 255);
 }
-/* 
-.darkmode{
+
+.darkmode:root{
     --accent-color: var(--primary-600);
     --text-color:  var(--grey-200);
     --base-color:   rgb(40, 40, 40);
     --input-color:  rgb(83, 83, 83);
     --text-button-color: rgb(255, 255, 255);
     --button-hover-color: rgb(83, 83, 83);
-} */
+}
 body{
     background-color: var(--backgroundColor-1);
 }
@@ -43,8 +43,10 @@ body{
     margin-bottom: 10px;
     font-size: 16px;
     border: none;
+    color: var(--text-color);
     background-color: var(--input-color);
     margin-left: 150px;
+    border-radius: 3px;
 
 }
 label{
@@ -59,6 +61,7 @@ label{
     margin-bottom: 150px;
     margin-right: 100px;
 }
+
 .btn{
     display: flex;
     align-items: center;
