@@ -1,6 +1,6 @@
 # food-recipes-website
 
-helo 2
+hello :smile:
 
 ## TODO:
 
