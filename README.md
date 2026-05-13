@@ -35,12 +35,6 @@ Since this is a static project, no complex installation or build process is requ
 
 **Note:** For the best experience and to avoid potential CORS (Cross-Origin Resource Sharing) issues when fetching local JSON files, it is recommended to serve the project using a local development server, such as the "Live Server" extension in Visual Studio Code or Python's built-in HTTP server.
 
-Example using Python 3:
-```bash
-python -m http.server 8000
-```
-Then visit `http://localhost:8000` in your browser.
-
 ## Directory Structure
 
 *   `css/`: Contains page-specific and global stylesheets.
